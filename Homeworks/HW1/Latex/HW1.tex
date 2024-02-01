@@ -1,0 +1,102 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=25mm,right=25mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\author{}
+\date{}
+
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\epstopdfDeclareGraphicsRule{.gif}{png}{.png}{convert gif:#1 png:\OutputFile}
+\AppendGraphicsExtensions{.gif}
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\usepackage{amsmath}
+
+\usepackage{float} 
+\usepackage{hyperref}
+\usepackage{amsmath}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{%
+    \setcounter{equation}{0}%
+    \oldsubsection%
+}
+\begin{document}
+\begin{flushleft}
+\begin{LARGE}CPRE 488 Spring 2024: Embedded Systems Design\\
+HW 1: Pulse Position Modulation \\
+\end{LARGE}
+
+Jonathan Hess
+\\\href{https://github.com/Jetsama/EE435/tree/main/HW2}{GitHub Page}
+\end{flushleft}
+\author{}
+\date{}
+
+
+
+
+\section*{Task 1: Relearning VHDL}
+\begin{enumerate}
+    \item Read Sections 7-7.1 of the Free Range VHDL book\footnote{http://class.ece.iastate.edu/cpre488/resources/free\_range\_vhdl.pdf}.
+    \begin{enumerate}
+        \item Describe an unclear aspect and post a question on the “In-Class Discussion” topic on Blackboard. If everything was clear, describe Listing 7.1 line-by-line.
+        \item In Section 7.4, complete exercises 1 and 2.
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Task 2: Pulse Position Modulation}
+\begin{enumerate}
+    \item Compare PWM and PPM.
+    \item Draw a 6-channel PPM frame with a 20ms period, specified in milliseconds and clock cycles.
+    \item Design a Mealy-type state machine for capturing PPM frames (bubble diagram).
+    \item Design a Mealy-type state machine for generating PPM frames (bubble diagram).
+\end{enumerate}
+
+\section*{Task 3: HW/SW Interface Table}
+Read through the entire MP-1 document and provide a table with columns for:
+\begin{itemize}
+    \item Register Name
+    \item Relative Register Offset
+    \item Short Register Description
+\end{itemize}
+
+\section*{Task 4: High-level Architecture}
+Draw the high-level architecture of the MP-1 PPM interfacing system illustrating the location and interconnection of primary components.
+
+\end{document}

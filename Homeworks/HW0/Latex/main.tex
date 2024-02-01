@@ -1,0 +1,3767 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{8211}{\textendash}
+\DeclareUnicodeCharacter{46}{\textperiodcentered}
+\DeclareUnicodeCharacter{8220}{\textquotedblleft}
+\DeclareUnicodeCharacter{58}{$\colon$}
+\DeclareUnicodeCharacter{8221}{\textquotedblright}
+\DeclareUnicodeCharacter{32}{$\ $}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=612pt,paperheight=792pt]{geometry}
+\begin{document}
+\definecolor{color_29791}{rgb}{0,0,0}
+\definecolor{color_30046}{rgb}{0,0,1}
+\definecolor{color_282751}{rgb}{1,1,0}
+\definecolor{color_214160}{rgb}{0.72549,0.803922,0.898039}
+\definecolor{color_30879}{rgb}{0,0.12549,0.376471}
+\definecolor{color_256740}{rgb}{0.901961,0.72549,0.721569}
+\definecolor{color_243663}{rgb}{0.843137,0.894118,0.741177}
+\definecolor{color_278747}{rgb}{0.988235,0.835294,0.709804}
+\definecolor{color_220447}{rgb}{0.752941,0.752941,0.752941}
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(165.26,-77.14001){\fontsize{15.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}CprE 488 – Embedded Systems Design }
+\put(291.05,-96.70001){\fontsize{15.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(236.93,-114.46){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}HW-0: VGA Timing }
+\put(39,-129.58){\fontsize{12}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(225.41,-143.14){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Assigned: Monday of Week 1 }
+\put(241.37,-156.58){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Due: Friday of Week 1 }
+\put(268.37,-170.02){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Points: 10 }
+\put(39,-183.46){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(39,-196.9){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(39,-210.22){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(39,-223.66){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}1) Embedded Example. Write a brief description of an embedded system with which you are familiar, that is }
+\put(39,-237.1){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}separate from one of the examples discussed in class. Explain three ways in which your chosen system fits the }
+\put(39,-250.57){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}definitions of an embedded system presented in Lect-01.  }
+\put(39,-264.01){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(39,-277.45){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(39,-290.89){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}2) VGA Timing.  Video Graphics Array (VGA) refers to a standard for analog computer display that was first }
+\put(39,-304.33){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}introduced in the late 1980s. While the precise signal timings for driving a VGA display are specified, published, }
+\put(39,-317.77){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and sold by the VESA organization (www.vesa.org), the Wikipedia article on VGA }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_30046][even odd rule]
+(276.17pt, -319.69pt) -- (340.154pt, -319.69pt)
+ -- (340.154pt, -319.69pt)
+ -- (340.154pt, -318.97pt)
+ -- (340.154pt, -318.97pt)
+ -- (276.17pt, -318.97pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-331.21){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(en.wikipedia.org/wiki/Video\_Graphics\_Array) is sufficient for our understanding.  }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_30046][even odd rule]
+(42.36pt, -333.13pt) -- (243.41pt, -333.13pt)
+ -- (243.41pt, -333.13pt)
+ -- (243.41pt, -332.41pt)
+ -- (243.41pt, -332.41pt)
+ -- (42.36pt, -332.41pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-344.53){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-357.97){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Consider the display on a CRT-based VGA monitor (LCDs use significantly different display technology but the }
+\put(39,-371.41){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}controller circuit is not substantially different). Color CRT displays use three amplitude-modulated moving }
+\put(39,-384.85){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}electron beams (one each for red, blue, and green color intensity) to energize a phosphor coated screen on the }
+\put(39,-398.29){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}display end of the CRT. Between the electron guns and the display surface, the beam passes through the neck of }
+\put(39,-411.73){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the CRT where magnetic fields are manipulated to cause the rays to traverse the display surface in a “raster” }
+\put(39,-425.19){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}patter, horizontally from left to right and vertically from top to bottom. As the cathode ray traverses the surface }
+\put(39,-438.63){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of the display, the current sent to the electron guns can be increased or decreased to change the brightness of }
+\put(39,-452.07){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the red, blue, and green components at the ray impact point. The figure below (from the excellent Digilent }
+\put(39,-465.51){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}BASYS2 reference manual chapter on this topic:  }
+\put(39,-478.83){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(https://reference.digilentinc.com/\_media/basys2:basys2\_rm.pdf) illustrates this process.  }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_30046][even odd rule]
+(42.36pt, -480.75pt) -- (332.71pt, -480.75pt)
+ -- (332.71pt, -480.75pt)
+ -- (332.71pt, -480.03pt)
+ -- (332.71pt, -480.03pt)
+ -- (42.36pt, -480.03pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-492.27){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-505.71){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-519.15){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-532.59){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-546.03){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-559.47){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-572.91){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-586.35){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-599.82){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-613.14){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-626.58){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-640.02){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-653.46){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-666.9){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-680.34){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-693.776){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(123,-708.772){\includegraphics[width=324pt,height=216.75pt]{latexImage_03db6d628acb71f88c64488d9a73dbac.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(288.29,-729.536){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2 }
+\put(39,-742.976){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-72.34003){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-85.78003){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-99.21997){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The video data comes from the video framebuffer (or equivalent video refresh region of memory), and the }
+\put(39,-112.66){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}controller must index into this video memory as the beams move across the display. For a 640x480 display, }
+\put(39,-126.1){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}there are several precisely-timed stages for each horizontal scan line displayed during this process: }
+\put(39,-139.42){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(75.024,-152.86){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1. A “front porch”, which provides time for the electron gun to stabilize to the start of the active row: }
+\put(93.02,-166.3){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(98.42,-167.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fp}
+\put(104.18,-166.3){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}, during the horizontal blanking / retrace period.  }
+\put(75.024,-179.74){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2. A sync pulse that denotes the start of a horizontal row to be displayed: T}
+\put(416.95,-180.7){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pw}
+\put(425.47,-179.74){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. }
+\put(75.024,-193.18){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}3. A “back porch”, which is the portion of the scan line between the end of the horizontal sync pulse }
+\put(93.02,-206.62){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and the start of active video: T}
+\put(229.13,-207.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bp}
+\put(236.33,-206.62){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. }
+\put(75.024,-220.06){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}4. The time it takes to display the 640 pixels in a given row: T}
+\put(353.47,-221.02){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}disp}
+\put(364.99,-220.06){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. }
+\put(39,-233.5){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-246.97){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}These stages are illustrated (for a single horizontal line) in the figure below. Taken together, these stages are }
+\put(39,-260.41){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}referred to as the horizontal sync pulse T}
+\put(221.93,-261.37){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}S}
+\put(225.17,-260.41){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}.  }
+\put(39,-273.73){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-287.17){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-300.61){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-314.05){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-327.49){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-340.93){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-354.37){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-367.81){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}For the vertical scan, there are a corresponding set of stages whose timing is determined by the refresh rate of }
+\put(39,-381.25){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the display. A simplified version of the VGA display process is represented in the figure below.   }
+\put(39,-394.69){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-408.01){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-421.47){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-434.91){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-448.35){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-461.79){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-475.23){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-488.67){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-502.11){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-515.55){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-528.99){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-542.31){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-555.75){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-569.19){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-582.63){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-596.1){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-609.54){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-622.98){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-636.42){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-649.86){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-663.3){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(39,-676.62){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}For a 640x480 VGA display using a 25 MHz pixel clock, the following horizontal signal timings can be derived. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(39pt, -693.176pt) -- (500.86pt, -693.176pt)
+ -- (500.86pt, -693.176pt)
+ -- (500.86pt, -679.736pt)
+ -- (500.86pt, -679.736pt)
+ -- (39pt, -679.736pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-690.056){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Convert the VGA signal timings to the equivalent number of clock cycles. Briefly explain your reasoning.  }
+\put(39,-703.496){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(39pt, -339.77pt) -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -294.019pt)
+ -- (542.8782pt, -294.019pt)
+ -- (39pt, -294.019pt) -- cycle
+;
+\filldraw[color_214160][even odd rule]
+(44.12568pt, -338.3735pt) -- (78.29684pt, -338.3735pt)
+ -- (78.29684pt, -338.3735pt)
+ -- (78.29683pt, -294.841pt)
+ -- (78.29683pt, -294.841pt)
+ -- (44.12567pt, -294.841pt) -- cycle
+;
+\draw[color_30879,line width=1.659742pt,line join=round]
+(44.12568pt, -338.3735pt) -- (78.29684pt, -338.3735pt)
+ -- (78.29684pt, -338.3735pt)
+ -- (78.29683pt, -294.841pt)
+ -- (78.29683pt, -294.841pt)
+ -- (44.12567pt, -294.841pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(50.75488,-323.0987){\fontsize{19.49539}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}T}
+\put(60.42044,-327.8582){\fontsize{12.96453}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}fp}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(39pt, -339.77pt) -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -294.019pt)
+ -- (542.8782pt, -294.019pt)
+ -- (39pt, -294.019pt) -- cycle
+;
+\filldraw[color_256740][even odd rule]
+(78.29684pt, -338.3735pt) -- (180.8103pt, -338.3735pt)
+ -- (180.8103pt, -338.3735pt)
+ -- (180.8103pt, -294.841pt)
+ -- (180.8103pt, -294.841pt)
+ -- (78.29683pt, -294.841pt) -- cycle
+;
+\draw[color_30879,line width=1.659742pt,line join=round]
+(78.29684pt, -338.3735pt) -- (180.8103pt, -338.3735pt)
+ -- (180.8103pt, -338.3735pt)
+ -- (180.8103pt, -294.841pt)
+ -- (180.8103pt, -294.841pt)
+ -- (78.29683pt, -294.841pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(116.8712,-323.0987){\fontsize{19.49539}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}T}
+\put(125.5588,-327.8582){\fontsize{12.96453}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}pw}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(39pt, -339.77pt) -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -294.019pt)
+ -- (542.8782pt, -294.019pt)
+ -- (39pt, -294.019pt) -- cycle
+;
+\filldraw[color_243663][even odd rule]
+(180.8103pt, -338.3735pt) -- (249.1526pt, -338.3735pt)
+ -- (249.1526pt, -338.3735pt)
+ -- (249.1526pt, -294.841pt)
+ -- (249.1526pt, -294.841pt)
+ -- (180.8103pt, -294.841pt) -- cycle
+;
+\draw[color_30879,line width=1.659742pt,line join=round]
+(180.8103pt, -338.3735pt) -- (249.1526pt, -338.3735pt)
+ -- (249.1526pt, -338.3735pt)
+ -- (249.1526pt, -294.841pt)
+ -- (249.1526pt, -294.841pt)
+ -- (180.8103pt, -294.841pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(203.2006,-323.0987){\fontsize{19.49539}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}T}
+\put(212.8661,-327.8582){\fontsize{12.96453}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}bp}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(39pt, -339.77pt) -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -339.77pt)
+ -- (542.8782pt, -294.019pt)
+ -- (542.8782pt, -294.019pt)
+ -- (39pt, -294.019pt) -- cycle
+;
+\filldraw[color_278747][even odd rule]
+(249.1526pt, -338.3735pt) -- (542.0483pt, -338.3735pt)
+ -- (542.0483pt, -338.3735pt)
+ -- (542.0483pt, -294.841pt)
+ -- (542.0483pt, -294.841pt)
+ -- (249.1526pt, -294.841pt) -- cycle
+;
+\draw[color_30879,line width=1.659742pt,line join=round]
+(249.1526pt, -338.3735pt) -- (542.0483pt, -338.3735pt)
+ -- (542.0483pt, -338.3735pt)
+ -- (542.0483pt, -294.841pt)
+ -- (542.0483pt, -294.841pt)
+ -- (249.1526pt, -294.841pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(380.3374,-323.0987){\fontsize{19.49539}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}T}
+\put(388.6361,-327.8582){\fontsize{12.96453}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}disp}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(87.75pt, -657.09pt) -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (87.74999pt, -399.8417pt) -- cycle
+;
+\draw[color_29791,line width=2.038951pt,line join=round]
+(185.4397pt, -465.7118pt) -- (209.4274pt, -465.7118pt)
+ -- (209.4274pt, -465.7118pt)
+ -- (209.4274pt, -441.7808pt)
+ -- (209.4274pt, -441.7808pt)
+ -- (185.4397pt, -441.7808pt) -- cycle
+;
+\draw[color_29791,line width=2.038951pt,line join=round]
+(185.4397pt, -638.2563pt) -- (383.3379pt, -638.2563pt)
+ -- (383.3379pt, -638.2563pt)
+ -- (383.3379pt, -440.8256pt)
+ -- (383.3379pt, -440.8256pt)
+ -- (185.4397pt, -440.8256pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(252.855,-466.1805){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pixel (0,0)}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(87.75pt, -657.09pt) -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (87.74999pt, -399.8417pt) -- cycle
+;
+\filldraw[color_29791][nonzero rule]
+(203.8203pt, -457.6251pt) -- (197.3736pt, -453.6865pt)
+ -- (197.3736pt, -453.6865pt)
+ -- (203.9802pt, -450.027pt)
+ -- (203.9802pt, -450.027pt) .. controls (204.1501pt, -449.9273pt) and (204.37pt, -449.9971pt) .. (204.4699pt, -450.1666pt)
+ -- (204.4699pt, -450.1666pt) .. controls (204.5699pt, -450.3361pt) and (204.4999pt, -450.5555pt) .. (204.33pt, -450.6552pt)
+ -- (204.33pt, -450.6552pt)
+ -- (198.2631pt, -454.0155pt)
+ -- (198.2631pt, -454.0155pt)
+ -- (198.2731pt, -453.3973pt)
+ -- (198.2731pt, -453.3973pt)
+ -- (204.2001pt, -457.0169pt)
+ -- (204.2001pt, -457.0169pt) .. controls (204.37pt, -457.1166pt) and (204.42pt, -457.3359pt) .. (204.31pt, -457.5055pt)
+ -- (204.31pt, -457.5055pt) .. controls (204.2101pt, -457.675pt) and (203.9902pt, -457.7248pt) .. (203.8203pt, -457.6251pt) -- cycle
+(239.332pt, -461.3643pt) -- (235.414pt, -461.2746pt)
+ -- (235.414pt, -461.2746pt)
+ -- (233.485pt, -461.1848pt)
+ -- (233.485pt, -461.1848pt)
+ -- (231.606pt, -461.0453pt)
+ -- (231.606pt, -461.0453pt)
+ -- (229.7869pt, -460.8857pt)
+ -- (229.7869pt, -460.8857pt)
+ -- (228.0478pt, -460.6863pt)
+ -- (228.0478pt, -460.6863pt)
+ -- (226.3987pt, -460.457pt)
+ -- (226.3987pt, -460.457pt)
+ -- (224.8594pt, -460.2077pt)
+ -- (224.8594pt, -460.2077pt)
+ -- (223.4302pt, -459.9384pt)
+ -- (223.4302pt, -459.9384pt)
+ -- (222.1409pt, -459.6592pt)
+ -- (222.1409pt, -459.6592pt)
+ -- (221.0114pt, -459.3502pt)
+ -- (221.0114pt, -459.3502pt)
+ -- (220.5017pt, -459.1906pt)
+ -- (220.5017pt, -459.1906pt)
+ -- (220.0319pt, -459.0211pt)
+ -- (220.0319pt, -459.0211pt)
+ -- (219.6221pt, -458.8615pt)
+ -- (219.6221pt, -458.8615pt)
+ -- (219.2423pt, -458.692pt)
+ -- (219.2423pt, -458.692pt)
+ -- (218.9125pt, -458.5126pt)
+ -- (218.9125pt, -458.5126pt)
+ -- (218.6227pt, -458.3231pt)
+ -- (218.6227pt, -458.3231pt)
+ -- (218.3928pt, -458.1237pt)
+ -- (218.3928pt, -458.1237pt)
+ -- (218.2129pt, -457.9342pt)
+ -- (218.2129pt, -457.9342pt) .. controls (218.1929pt, -457.9043pt) and (218.1729pt, -457.8844pt) .. (218.1529pt, -457.8545pt)
+ -- (218.1529pt, -457.8545pt)
+ -- (218.0629pt, -457.6849pt)
+ -- (218.0629pt, -457.6849pt) .. controls (218.0529pt, -457.655pt) and (218.033pt, -457.6151pt) .. (218.033pt, -457.5753pt)
+ -- (218.033pt, -457.5753pt)
+ -- (218.003pt, -457.4058pt)
+ -- (218.003pt, -457.4058pt)
+ -- (217.973pt, -457.2363pt)
+ -- (217.973pt, -457.2363pt)
+ -- (218.003pt, -457.3359pt)
+ -- (218.003pt, -457.3359pt)
+ -- (217.913pt, -457.1664pt)
+ -- (217.913pt, -457.1664pt)
+ -- (217.973pt, -457.2462pt)
+ -- (217.973pt, -457.2462pt)
+ -- (217.8231pt, -457.0767pt)
+ -- (217.8231pt, -457.0767pt)
+ -- (217.6532pt, -456.9371pt)
+ -- (217.6532pt, -456.9371pt)
+ -- (217.4233pt, -456.7875pt)
+ -- (217.4233pt, -456.7875pt)
+ -- (217.1534pt, -456.6479pt)
+ -- (217.1534pt, -456.6479pt)
+ -- (216.8136pt, -456.4884pt)
+ -- (216.8136pt, -456.4884pt)
+ -- (216.4238pt, -456.3388pt)
+ -- (216.4238pt, -456.3388pt)
+ -- (215.974pt, -456.1793pt)
+ -- (215.974pt, -456.1793pt)
+ -- (215.4943pt, -456.0297pt)
+ -- (215.4943pt, -456.0297pt)
+ -- (214.3948pt, -455.7306pt)
+ -- (214.3948pt, -455.7306pt)
+ -- (213.1355pt, -455.4514pt)
+ -- (213.1355pt, -455.4514pt)
+ -- (211.7262pt, -455.1822pt)
+ -- (211.7262pt, -455.1822pt)
+ -- (210.207pt, -454.9429pt)
+ -- (210.207pt, -454.9429pt)
+ -- (208.5778pt, -454.7135pt)
+ -- (208.5778pt, -454.7135pt)
+ -- (206.8487pt, -454.524pt)
+ -- (206.8487pt, -454.524pt)
+ -- (205.0496pt, -454.3645pt)
+ -- (205.0496pt, -454.3645pt)
+ -- (203.1806pt, -454.2249pt)
+ -- (203.1806pt, -454.2249pt)
+ -- (201.2716pt, -454.1252pt)
+ -- (201.2716pt, -454.1252pt)
+ -- (198.0832pt, -454.0654pt)
+ -- (198.0832pt, -454.0654pt)
+ -- (198.0932pt, -453.3474pt)
+ -- (198.0932pt, -453.3474pt)
+ -- (201.3016pt, -453.4073pt)
+ -- (201.3016pt, -453.4073pt)
+ -- (203.2306pt, -453.507pt)
+ -- (203.2306pt, -453.507pt)
+ -- (205.1096pt, -453.6466pt)
+ -- (205.1096pt, -453.6466pt)
+ -- (206.9387pt, -453.8062pt)
+ -- (206.9387pt, -453.8062pt)
+ -- (208.6778pt, -454.0056pt)
+ -- (208.6778pt, -454.0056pt)
+ -- (210.3269pt, -454.2349pt)
+ -- (210.3269pt, -454.2349pt)
+ -- (211.8661pt, -454.4842pt)
+ -- (211.8661pt, -454.4842pt)
+ -- (213.2954pt, -454.7534pt)
+ -- (213.2954pt, -454.7534pt)
+ -- (214.5847pt, -455.0425pt)
+ -- (214.5847pt, -455.0425pt)
+ -- (215.7141pt, -455.3417pt)
+ -- (215.7141pt, -455.3417pt)
+ -- (216.2239pt, -455.5012pt)
+ -- (216.2239pt, -455.5012pt)
+ -- (216.6837pt, -455.6707pt)
+ -- (216.6837pt, -455.6707pt)
+ -- (217.1134pt, -455.8403pt)
+ -- (217.1134pt, -455.8403pt)
+ -- (217.4932pt, -456.0098pt)
+ -- (217.4932pt, -456.0098pt)
+ -- (217.8331pt, -456.1992pt)
+ -- (217.8331pt, -456.1992pt)
+ -- (218.1129pt, -456.3887pt)
+ -- (218.1129pt, -456.3887pt)
+ -- (218.3528pt, -456.5981pt)
+ -- (218.3528pt, -456.5981pt)
+ -- (218.5027pt, -456.7576pt)
+ -- (218.5027pt, -456.7576pt) .. controls (218.5227pt, -456.7776pt) and (218.5427pt, -456.8075pt) .. (218.5527pt, -456.8374pt)
+ -- (218.5527pt, -456.8374pt)
+ -- (218.6427pt, -457.0069pt)
+ -- (218.6427pt, -457.0069pt) .. controls (218.6626pt, -457.0368pt) and (218.6726pt, -457.0767pt) .. (218.6826pt, -457.1166pt)
+ -- (218.6826pt, -457.1166pt)
+ -- (218.7126pt, -457.2861pt)
+ -- (218.7126pt, -457.2861pt)
+ -- (218.7426pt, -457.4556pt)
+ -- (218.7426pt, -457.4556pt)
+ -- (218.7026pt, -457.3559pt)
+ -- (218.7026pt, -457.3559pt)
+ -- (218.7926pt, -457.5254pt)
+ -- (218.7926pt, -457.5254pt)
+ -- (218.7426pt, -457.4456pt)
+ -- (218.7426pt, -457.4456pt)
+ -- (218.8625pt, -457.5852pt)
+ -- (218.8625pt, -457.5852pt)
+ -- (219.0325pt, -457.7248pt)
+ -- (219.0325pt, -457.7248pt)
+ -- (219.2523pt, -457.8844pt)
+ -- (219.2523pt, -457.8844pt)
+ -- (219.5422pt, -458.0339pt)
+ -- (219.5422pt, -458.0339pt)
+ -- (219.882pt, -458.1935pt)
+ -- (219.882pt, -458.1935pt)
+ -- (220.2718pt, -458.343pt)
+ -- (220.2718pt, -458.343pt)
+ -- (220.7216pt, -458.5026pt)
+ -- (220.7216pt, -458.5026pt)
+ -- (221.2013pt, -458.6621pt)
+ -- (221.2013pt, -458.6621pt)
+ -- (222.3008pt, -458.9513pt)
+ -- (222.3008pt, -458.9513pt)
+ -- (223.5601pt, -459.2405pt)
+ -- (223.5601pt, -459.2405pt)
+ -- (224.9694pt, -459.4997pt)
+ -- (224.9694pt, -459.4997pt)
+ -- (226.4886pt, -459.749pt)
+ -- (226.4886pt, -459.749pt)
+ -- (228.1278pt, -459.9684pt)
+ -- (228.1278pt, -459.9684pt)
+ -- (229.8469pt, -460.1678pt)
+ -- (229.8469pt, -460.1678pt)
+ -- (231.6559pt, -460.3273pt)
+ -- (231.6559pt, -460.3273pt)
+ -- (233.525pt, -460.4669pt)
+ -- (233.525pt, -460.4669pt)
+ -- (235.434pt, -460.5566pt)
+ -- (235.434pt, -460.5566pt)
+ -- (239.342pt, -460.6464pt) -- cycle
+;
+\draw[color_29791,line width=2.038951pt,line join=round]
+(359.3502pt, -638.2563pt) -- (383.3379pt, -638.2563pt)
+ -- (383.3379pt, -638.2563pt)
+ -- (383.3379pt, -614.3253pt)
+ -- (383.3379pt, -614.3253pt)
+ -- (359.3502pt, -614.3253pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(259.0019,-608.0195){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pixel (479,639)}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(87.75pt, -657.09pt) -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (87.74999pt, -399.8417pt) -- cycle
+;
+\filldraw[color_29791][nonzero rule]
+(364.7175pt, -629.9592pt) -- (371.2841pt, -626.231pt)
+ -- (371.2841pt, -626.231pt)
+ -- (364.7974pt, -622.3601pt)
+ -- (364.7974pt, -622.3601pt) .. controls (364.6275pt, -622.2584pt) and (364.4076pt, -622.3132pt) .. (364.3077pt, -622.4838pt)
+ -- (364.3077pt, -622.4838pt) .. controls (364.1977pt, -622.6533pt) and (364.2577pt, -622.8746pt) .. (364.4276pt, -622.9763pt)
+ -- (364.4276pt, -622.9763pt)
+ -- (370.3846pt, -626.5311pt)
+ -- (370.3846pt, -626.5311pt)
+ -- (370.3946pt, -625.9109pt)
+ -- (370.3946pt, -625.9109pt)
+ -- (364.3577pt, -629.335pt)
+ -- (364.3577pt, -629.335pt) .. controls (364.1877pt, -629.4337pt) and (364.1278pt, -629.6521pt) .. (364.2277pt, -629.8246pt)
+ -- (364.2277pt, -629.8246pt) .. controls (364.3177pt, -629.9971pt) and (364.5376pt, -630.0569pt) .. (364.7175pt, -629.9592pt) -- cycle
+(304.9583pt, -614.2944pt) -- (304.9782pt, -614.5706pt)
+ -- (304.9782pt, -614.5706pt) .. controls (304.9882pt, -614.5916pt) and (304.9882pt, -614.6125pt) .. (304.9882pt, -614.6334pt)
+ -- (304.9882pt, -614.6334pt)
+ -- (305.0682pt, -614.9176pt)
+ -- (305.0682pt, -614.9176pt) .. controls (305.0682pt, -614.9346pt) and (305.0782pt, -614.9515pt) .. (305.0881pt, -614.9684pt)
+ -- (305.0881pt, -614.9684pt)
+ -- (305.2081pt, -615.2457pt)
+ -- (305.2081pt, -615.2457pt)
+ -- (305.378pt, -615.5607pt)
+ -- (305.378pt, -615.5607pt) .. controls (305.388pt, -615.5757pt) and (305.398pt, -615.5897pt) .. (305.408pt, -615.6036pt)
+ -- (305.408pt, -615.6036pt)
+ -- (305.6179pt, -615.8798pt)
+ -- (305.6179pt, -615.8798pt)
+ -- (305.8878pt, -616.1829pt)
+ -- (305.8878pt, -616.1829pt)
+ -- (306.5674pt, -616.7662pt)
+ -- (306.5674pt, -616.7662pt)
+ -- (307.397pt, -617.3426pt)
+ -- (307.397pt, -617.3426pt)
+ -- (308.4064pt, -617.906pt)
+ -- (308.4064pt, -617.906pt)
+ -- (309.5558pt, -618.4554pt)
+ -- (309.5558pt, -618.4554pt)
+ -- (310.8452pt, -618.9938pt)
+ -- (310.8452pt, -618.9938pt)
+ -- (312.2845pt, -619.5164pt)
+ -- (312.2845pt, -619.5164pt)
+ -- (313.8636pt, -620.0358pt)
+ -- (313.8636pt, -620.0358pt)
+ -- (315.5728pt, -620.5394pt)
+ -- (315.5728pt, -620.5394pt)
+ -- (317.4018pt, -621.028pt)
+ -- (317.4018pt, -621.028pt)
+ -- (319.3608pt, -621.5016pt)
+ -- (319.3608pt, -621.5016pt)
+ -- (321.4197pt, -621.9663pt)
+ -- (321.4197pt, -621.9663pt)
+ -- (323.5886pt, -622.417pt)
+ -- (323.5886pt, -622.417pt)
+ -- (325.8675pt, -622.8438pt)
+ -- (325.8675pt, -622.8438pt)
+ -- (328.2363pt, -623.2565pt)
+ -- (328.2363pt, -623.2565pt)
+ -- (330.695pt, -623.6534pt)
+ -- (330.695pt, -623.6534pt)
+ -- (333.2537pt, -624.0283pt)
+ -- (333.2537pt, -624.0283pt)
+ -- (335.8723pt, -624.3803pt)
+ -- (335.8723pt, -624.3803pt)
+ -- (338.5609pt, -624.7103pt)
+ -- (338.5609pt, -624.7103pt)
+ -- (341.3295pt, -625.0165pt)
+ -- (341.3295pt, -625.0165pt)
+ -- (344.1481pt, -625.3016pt)
+ -- (344.1481pt, -625.3016pt)
+ -- (347.0266pt, -625.5639pt)
+ -- (347.0266pt, -625.5639pt)
+ -- (349.9551pt, -625.7962pt)
+ -- (349.9551pt, -625.7962pt)
+ -- (352.9236pt, -625.9977pt)
+ -- (352.9236pt, -625.9977pt)
+ -- (358.9604pt, -626.3197pt)
+ -- (358.9604pt, -626.3197pt)
+ -- (365.0973pt, -626.5221pt)
+ -- (365.0973pt, -626.5221pt)
+ -- (370.5645pt, -626.582pt)
+ -- (370.5645pt, -626.582pt)
+ -- (370.5745pt, -625.864pt)
+ -- (370.5745pt, -625.864pt)
+ -- (365.1173pt, -625.8042pt)
+ -- (365.1173pt, -625.8042pt)
+ -- (359.0004pt, -625.6028pt)
+ -- (359.0004pt, -625.6028pt)
+ -- (352.9735pt, -625.2817pt)
+ -- (352.9735pt, -625.2817pt)
+ -- (350.015pt, -625.0803pt)
+ -- (350.015pt, -625.0803pt)
+ -- (347.0966pt, -624.8489pt)
+ -- (347.0966pt, -624.8489pt)
+ -- (344.218pt, -624.5877pt)
+ -- (344.218pt, -624.5877pt)
+ -- (341.4095pt, -624.3035pt)
+ -- (341.4095pt, -624.3035pt)
+ -- (338.6509pt, -623.9974pt)
+ -- (338.6509pt, -623.9974pt)
+ -- (335.9623pt, -623.6683pt)
+ -- (335.9623pt, -623.6683pt)
+ -- (333.3536pt, -623.3184pt)
+ -- (333.3536pt, -623.3184pt)
+ -- (330.8149pt, -622.9445pt)
+ -- (330.8149pt, -622.9445pt)
+ -- (328.3662pt, -622.5496pt)
+ -- (328.3662pt, -622.5496pt)
+ -- (325.9974pt, -622.1388pt)
+ -- (325.9974pt, -622.1388pt)
+ -- (323.7386pt, -621.714pt)
+ -- (323.7386pt, -621.714pt)
+ -- (321.5697pt, -621.2663pt)
+ -- (321.5697pt, -621.2663pt)
+ -- (319.5208pt, -620.8036pt)
+ -- (319.5208pt, -620.8036pt)
+ -- (317.5817pt, -620.335pt)
+ -- (317.5817pt, -620.335pt)
+ -- (315.7726pt, -619.8514pt)
+ -- (315.7726pt, -619.8514pt)
+ -- (314.0935pt, -619.3538pt)
+ -- (314.0935pt, -619.3538pt)
+ -- (312.5343pt, -618.8413pt)
+ -- (312.5343pt, -618.8413pt)
+ -- (311.1251pt, -618.3318pt)
+ -- (311.1251pt, -618.3318pt)
+ -- (309.8657pt, -617.8073pt)
+ -- (309.8657pt, -617.8073pt)
+ -- (308.7563pt, -617.2798pt)
+ -- (308.7563pt, -617.2798pt)
+ -- (307.8068pt, -616.7523pt)
+ -- (307.8068pt, -616.7523pt)
+ -- (307.0372pt, -616.2218pt)
+ -- (307.0372pt, -616.2218pt)
+ -- (306.4275pt, -615.6973pt)
+ -- (306.4275pt, -615.6973pt)
+ -- (306.1876pt, -615.4471pt)
+ -- (306.1876pt, -615.4471pt)
+ -- (305.9777pt, -615.1699pt)
+ -- (305.9777pt, -615.1699pt)
+ -- (306.0077pt, -615.2137pt)
+ -- (306.0077pt, -615.2137pt)
+ -- (305.8677pt, -614.9604pt)
+ -- (305.8677pt, -614.9604pt)
+ -- (305.7478pt, -614.6833pt)
+ -- (305.7478pt, -614.6833pt)
+ -- (305.7678pt, -614.7351pt)
+ -- (305.7678pt, -614.7351pt)
+ -- (305.6879pt, -614.4509pt)
+ -- (305.6879pt, -614.4509pt)
+ -- (305.6978pt, -614.5128pt)
+ -- (305.6978pt, -614.5128pt)
+ -- (305.6779pt, -614.2366pt) -- cycle
+;
+\draw[color_29791,line width=0.71963pt,dash pattern=on 1.553601pt off 0.5178669pt,line join=round]
+(186.3792pt, -497.4802pt) .. controls (163.8908pt, -497.4802pt) and (141.4024pt, -501.8077pt) .. (141.4024pt, -506.1253pt)
+ -- (141.4024pt, -506.1253pt) .. controls (141.4024pt, -510.4528pt) and (163.3911pt, -514.7704pt) .. (185.3798pt, -514.7704pt)
+;
+\draw[color_29791,line width=0.71963pt,dash pattern=on 1.553601pt off 0.5178669pt,line join=round]
+(186.3393pt, -497.4802pt) -- (383.2379pt, -497.4802pt)
+;
+\draw[color_29791,line width=0.71963pt,dash pattern=on 1.553601pt off 0.5178669pt,line join=round]
+(383.2779pt, -483.6002pt) .. controls (392.2733pt, -483.6002pt) and (401.2686pt, -487.0802pt) .. (401.2686pt, -490.5701pt)
+ -- (401.2686pt, -490.5701pt) .. controls (401.2686pt, -494.0501pt) and (392.2733pt, -497.5301pt) .. (383.2779pt, -497.5301pt)
+;
+\filldraw[color_29791][nonzero rule]
+(377.281pt, -517.8215pt) -- (383.2779pt, -514.8302pt)
+ -- (383.2779pt, -514.8302pt)
+ -- (377.281pt, -511.8388pt) -- cycle
+(185.4197pt, -514.4712pt) -- (185.3798pt, -514.4712pt)
+ -- (185.3798pt, -514.4712pt)
+ -- (185.3798pt, -515.1891pt)
+ -- (185.3798pt, -515.1891pt)
+ -- (185.4197pt, -515.1891pt) -- cycle
+(188.2982pt, -514.4712pt) -- (186.1394pt, -514.4712pt)
+ -- (186.1394pt, -514.4712pt)
+ -- (186.1394pt, -515.1891pt)
+ -- (186.1394pt, -515.1891pt)
+ -- (188.2982pt, -515.1891pt) -- cycle
+(191.1768pt, -514.4712pt) -- (189.0179pt, -514.4712pt)
+ -- (189.0179pt, -514.4712pt)
+ -- (189.0179pt, -515.1891pt)
+ -- (189.0179pt, -515.1891pt)
+ -- (191.1768pt, -515.1891pt) -- cycle
+(194.0553pt, -514.4712pt) -- (191.8964pt, -514.4712pt)
+ -- (191.8964pt, -514.4712pt)
+ -- (191.8964pt, -515.1891pt)
+ -- (191.8964pt, -515.1891pt)
+ -- (194.0553pt, -515.1891pt) -- cycle
+(196.9338pt, -514.4712pt) -- (194.7749pt, -514.4712pt)
+ -- (194.7749pt, -514.4712pt)
+ -- (194.7749pt, -515.1891pt)
+ -- (194.7749pt, -515.1891pt)
+ -- (196.9338pt, -515.1891pt) -- cycle
+(199.8123pt, -514.4712pt) -- (197.6534pt, -514.4712pt)
+ -- (197.6534pt, -514.4712pt)
+ -- (197.6534pt, -515.1891pt)
+ -- (197.6534pt, -515.1891pt)
+ -- (199.8123pt, -515.1891pt) -- cycle
+(202.6909pt, -514.4712pt) -- (200.532pt, -514.4712pt)
+ -- (200.532pt, -514.4712pt)
+ -- (200.532pt, -515.1891pt)
+ -- (200.532pt, -515.1891pt)
+ -- (202.6909pt, -515.1891pt) -- cycle
+(205.5694pt, -514.4712pt) -- (203.4105pt, -514.4712pt)
+ -- (203.4105pt, -514.4712pt)
+ -- (203.4105pt, -515.1891pt)
+ -- (203.4105pt, -515.1891pt)
+ -- (205.5694pt, -515.1891pt) -- cycle
+(208.4479pt, -514.4712pt) -- (206.289pt, -514.4712pt)
+ -- (206.289pt, -514.4712pt)
+ -- (206.289pt, -515.1891pt)
+ -- (206.289pt, -515.1891pt)
+ -- (208.4479pt, -515.1891pt) -- cycle
+(211.3264pt, -514.4712pt) -- (209.1675pt, -514.4712pt)
+ -- (209.1675pt, -514.4712pt)
+ -- (209.1675pt, -515.1891pt)
+ -- (209.1675pt, -515.1891pt)
+ -- (211.3264pt, -515.1891pt) -- cycle
+(214.2049pt, -514.4712pt) -- (212.046pt, -514.4712pt)
+ -- (212.046pt, -514.4712pt)
+ -- (212.046pt, -515.1891pt)
+ -- (212.046pt, -515.1891pt)
+ -- (214.2049pt, -515.1891pt) -- cycle
+(217.0834pt, -514.4712pt) -- (214.9246pt, -514.4712pt)
+ -- (214.9246pt, -514.4712pt)
+ -- (214.9246pt, -515.1891pt)
+ -- (214.9246pt, -515.1891pt)
+ -- (217.0834pt, -515.1891pt) -- cycle
+(219.962pt, -514.4712pt) -- (217.8031pt, -514.4712pt)
+ -- (217.8031pt, -514.4712pt)
+ -- (217.8031pt, -515.1891pt)
+ -- (217.8031pt, -515.1891pt)
+ -- (219.962pt, -515.1891pt) -- cycle
+(222.8405pt, -514.4712pt) -- (220.6816pt, -514.4712pt)
+ -- (220.6816pt, -514.4712pt)
+ -- (220.6816pt, -515.1891pt)
+ -- (220.6816pt, -515.1891pt)
+ -- (222.8405pt, -515.1891pt) -- cycle
+(225.719pt, -514.4712pt) -- (223.5601pt, -514.4712pt)
+ -- (223.5601pt, -514.4712pt)
+ -- (223.5601pt, -515.1891pt)
+ -- (223.5601pt, -515.1891pt)
+ -- (225.719pt, -515.1891pt) -- cycle
+(228.5975pt, -514.4712pt) -- (226.4386pt, -514.4712pt)
+ -- (226.4386pt, -514.4712pt)
+ -- (226.4386pt, -515.1891pt)
+ -- (226.4386pt, -515.1891pt)
+ -- (228.5975pt, -515.1891pt) -- cycle
+(231.476pt, -514.4712pt) -- (229.3172pt, -514.4712pt)
+ -- (229.3172pt, -514.4712pt)
+ -- (229.3172pt, -515.1891pt)
+ -- (229.3172pt, -515.1891pt)
+ -- (231.476pt, -515.1891pt) -- cycle
+(234.3546pt, -514.4712pt) -- (232.1957pt, -514.4712pt)
+ -- (232.1957pt, -514.4712pt)
+ -- (232.1957pt, -515.1891pt)
+ -- (232.1957pt, -515.1891pt)
+ -- (234.3546pt, -515.1891pt) -- cycle
+(237.2331pt, -514.4712pt) -- (235.0742pt, -514.4712pt)
+ -- (235.0742pt, -514.4712pt)
+ -- (235.0742pt, -515.1891pt)
+ -- (235.0742pt, -515.1891pt)
+ -- (237.2331pt, -515.1891pt) -- cycle
+(240.1116pt, -514.4712pt) -- (237.9527pt, -514.4712pt)
+ -- (237.9527pt, -514.4712pt)
+ -- (237.9527pt, -515.1891pt)
+ -- (237.9527pt, -515.1891pt)
+ -- (240.1116pt, -515.1891pt) -- cycle
+(242.9901pt, -514.4712pt) -- (240.8312pt, -514.4712pt)
+ -- (240.8312pt, -514.4712pt)
+ -- (240.8312pt, -515.1891pt)
+ -- (240.8312pt, -515.1891pt)
+ -- (242.9901pt, -515.1891pt) -- cycle
+(245.8687pt, -514.4712pt) -- (243.7097pt, -514.4712pt)
+ -- (243.7097pt, -514.4712pt)
+ -- (243.7097pt, -515.1891pt)
+ -- (243.7097pt, -515.1891pt)
+ -- (245.8687pt, -515.1891pt) -- cycle
+(248.7471pt, -514.4712pt) -- (246.5883pt, -514.4712pt)
+ -- (246.5883pt, -514.4712pt)
+ -- (246.5883pt, -515.1891pt)
+ -- (246.5883pt, -515.1891pt)
+ -- (248.7471pt, -515.1891pt) -- cycle
+(251.6257pt, -514.4712pt) -- (249.4668pt, -514.4712pt)
+ -- (249.4668pt, -514.4712pt)
+ -- (249.4668pt, -515.1891pt)
+ -- (249.4668pt, -515.1891pt)
+ -- (251.6257pt, -515.1891pt) -- cycle
+(254.5042pt, -514.4712pt) -- (252.3453pt, -514.4712pt)
+ -- (252.3453pt, -514.4712pt)
+ -- (252.3453pt, -515.1891pt)
+ -- (252.3453pt, -515.1891pt)
+ -- (254.5042pt, -515.1891pt) -- cycle
+(257.3827pt, -514.4712pt) -- (255.2238pt, -514.4712pt)
+ -- (255.2238pt, -514.4712pt)
+ -- (255.2238pt, -515.1891pt)
+ -- (255.2238pt, -515.1891pt)
+ -- (257.3827pt, -515.1891pt) -- cycle
+(260.2612pt, -514.4712pt) -- (258.1024pt, -514.4712pt)
+ -- (258.1024pt, -514.4712pt)
+ -- (258.1024pt, -515.1891pt)
+ -- (258.1024pt, -515.1891pt)
+ -- (260.2612pt, -515.1891pt) -- cycle
+(263.1397pt, -514.4712pt) -- (260.9809pt, -514.4712pt)
+ -- (260.9809pt, -514.4712pt)
+ -- (260.9809pt, -515.1891pt)
+ -- (260.9809pt, -515.1891pt)
+ -- (263.1397pt, -515.1891pt) -- cycle
+(266.0182pt, -514.4712pt) -- (263.8594pt, -514.4712pt)
+ -- (263.8594pt, -514.4712pt)
+ -- (263.8594pt, -515.1891pt)
+ -- (263.8594pt, -515.1891pt)
+ -- (266.0182pt, -515.1891pt) -- cycle
+(268.8968pt, -514.4712pt) -- (266.7379pt, -514.4712pt)
+ -- (266.7379pt, -514.4712pt)
+ -- (266.7379pt, -515.1891pt)
+ -- (266.7379pt, -515.1891pt)
+ -- (268.8968pt, -515.1891pt) -- cycle
+(271.7753pt, -514.4712pt) -- (269.6164pt, -514.4712pt)
+ -- (269.6164pt, -514.4712pt)
+ -- (269.6164pt, -515.1891pt)
+ -- (269.6164pt, -515.1891pt)
+ -- (271.7753pt, -515.1891pt) -- cycle
+(274.6538pt, -514.4712pt) -- (272.4949pt, -514.4712pt)
+ -- (272.4949pt, -514.4712pt)
+ -- (272.4949pt, -515.1891pt)
+ -- (272.4949pt, -515.1891pt)
+ -- (274.6538pt, -515.1891pt) -- cycle
+(277.5323pt, -514.4712pt) -- (275.3735pt, -514.4712pt)
+ -- (275.3735pt, -514.4712pt)
+ -- (275.3735pt, -515.1891pt)
+ -- (275.3735pt, -515.1891pt)
+ -- (277.5323pt, -515.1891pt) -- cycle
+(280.4109pt, -514.4712pt) -- (278.252pt, -514.4712pt)
+ -- (278.252pt, -514.4712pt)
+ -- (278.252pt, -515.1891pt)
+ -- (278.252pt, -515.1891pt)
+ -- (280.4109pt, -515.1891pt) -- cycle
+(283.2894pt, -514.4712pt) -- (281.1305pt, -514.4712pt)
+ -- (281.1305pt, -514.4712pt)
+ -- (281.1305pt, -515.1891pt)
+ -- (281.1305pt, -515.1891pt)
+ -- (283.2894pt, -515.1891pt) -- cycle
+(286.1679pt, -514.4712pt) -- (284.009pt, -514.4712pt)
+ -- (284.009pt, -514.4712pt)
+ -- (284.009pt, -515.1891pt)
+ -- (284.009pt, -515.1891pt)
+ -- (286.1679pt, -515.1891pt) -- cycle
+(289.0464pt, -514.4712pt) -- (286.8875pt, -514.4712pt)
+ -- (286.8875pt, -514.4712pt)
+ -- (286.8875pt, -515.1891pt)
+ -- (286.8875pt, -515.1891pt)
+ -- (289.0464pt, -515.1891pt) -- cycle
+(291.9249pt, -514.4712pt) -- (289.7661pt, -514.4712pt)
+ -- (289.7661pt, -514.4712pt)
+ -- (289.7661pt, -515.1891pt)
+ -- (289.7661pt, -515.1891pt)
+ -- (291.9249pt, -515.1891pt) -- cycle
+(294.8035pt, -514.4712pt) -- (292.6446pt, -514.4712pt)
+ -- (292.6446pt, -514.4712pt)
+ -- (292.6446pt, -515.1891pt)
+ -- (292.6446pt, -515.1891pt)
+ -- (294.8035pt, -515.1891pt) -- cycle
+(297.6819pt, -514.4712pt) -- (295.5231pt, -514.4712pt)
+ -- (295.5231pt, -514.4712pt)
+ -- (295.5231pt, -515.1891pt)
+ -- (295.5231pt, -515.1891pt)
+ -- (297.6819pt, -515.1891pt) -- cycle
+(300.5605pt, -514.4712pt) -- (298.4016pt, -514.4712pt)
+ -- (298.4016pt, -514.4712pt)
+ -- (298.4016pt, -515.1891pt)
+ -- (298.4016pt, -515.1891pt)
+ -- (300.5605pt, -515.1891pt) -- cycle
+(303.439pt, -514.4712pt) -- (301.2801pt, -514.4712pt)
+ -- (301.2801pt, -514.4712pt)
+ -- (301.2801pt, -515.1891pt)
+ -- (301.2801pt, -515.1891pt)
+ -- (303.439pt, -515.1891pt) -- cycle
+(306.3175pt, -514.4712pt) -- (304.1586pt, -514.4712pt)
+ -- (304.1586pt, -514.4712pt)
+ -- (304.1586pt, -515.1891pt)
+ -- (304.1586pt, -515.1891pt)
+ -- (306.3175pt, -515.1891pt) -- cycle
+(309.196pt, -514.4712pt) -- (307.0372pt, -514.4712pt)
+ -- (307.0372pt, -514.4712pt)
+ -- (307.0372pt, -515.1891pt)
+ -- (307.0372pt, -515.1891pt)
+ -- (309.196pt, -515.1891pt) -- cycle
+(312.0746pt, -514.4712pt) -- (309.9157pt, -514.4712pt)
+ -- (309.9157pt, -514.4712pt)
+ -- (309.9157pt, -515.1891pt)
+ -- (309.9157pt, -515.1891pt)
+ -- (312.0746pt, -515.1891pt) -- cycle
+(314.9531pt, -514.4712pt) -- (312.7942pt, -514.4712pt)
+ -- (312.7942pt, -514.4712pt)
+ -- (312.7942pt, -515.1891pt)
+ -- (312.7942pt, -515.1891pt)
+ -- (314.9531pt, -515.1891pt) -- cycle
+(317.8316pt, -514.4712pt) -- (315.6727pt, -514.4712pt)
+ -- (315.6727pt, -514.4712pt)
+ -- (315.6727pt, -515.1891pt)
+ -- (315.6727pt, -515.1891pt)
+ -- (317.8316pt, -515.1891pt) -- cycle
+(320.7101pt, -514.4712pt) -- (318.5512pt, -514.4712pt)
+ -- (318.5512pt, -514.4712pt)
+ -- (318.5512pt, -515.1891pt)
+ -- (318.5512pt, -515.1891pt)
+ -- (320.7101pt, -515.1891pt) -- cycle
+(323.5886pt, -514.4712pt) -- (321.4297pt, -514.4712pt)
+ -- (321.4297pt, -514.4712pt)
+ -- (321.4297pt, -515.1891pt)
+ -- (321.4297pt, -515.1891pt)
+ -- (323.5886pt, -515.1891pt) -- cycle
+(326.4672pt, -514.4712pt) -- (324.3083pt, -514.4712pt)
+ -- (324.3083pt, -514.4712pt)
+ -- (324.3083pt, -515.1891pt)
+ -- (324.3083pt, -515.1891pt)
+ -- (326.4672pt, -515.1891pt) -- cycle
+(329.3457pt, -514.4712pt) -- (327.1868pt, -514.4712pt)
+ -- (327.1868pt, -514.4712pt)
+ -- (327.1868pt, -515.1891pt)
+ -- (327.1868pt, -515.1891pt)
+ -- (329.3457pt, -515.1891pt) -- cycle
+(332.2242pt, -514.4712pt) -- (330.0653pt, -514.4712pt)
+ -- (330.0653pt, -514.4712pt)
+ -- (330.0653pt, -515.1891pt)
+ -- (330.0653pt, -515.1891pt)
+ -- (332.2242pt, -515.1891pt) -- cycle
+(335.1027pt, -514.4712pt) -- (332.9438pt, -514.4712pt)
+ -- (332.9438pt, -514.4712pt)
+ -- (332.9438pt, -515.1891pt)
+ -- (332.9438pt, -515.1891pt)
+ -- (335.1027pt, -515.1891pt) -- cycle
+(337.9812pt, -514.4712pt) -- (335.8223pt, -514.4712pt)
+ -- (335.8223pt, -514.4712pt)
+ -- (335.8223pt, -515.1891pt)
+ -- (335.8223pt, -515.1891pt)
+ -- (337.9812pt, -515.1891pt) -- cycle
+(340.8597pt, -514.4712pt) -- (338.7009pt, -514.4712pt)
+ -- (338.7009pt, -514.4712pt)
+ -- (338.7009pt, -515.1891pt)
+ -- (338.7009pt, -515.1891pt)
+ -- (340.8597pt, -515.1891pt) -- cycle
+(343.7383pt, -514.4712pt) -- (341.5794pt, -514.4712pt)
+ -- (341.5794pt, -514.4712pt)
+ -- (341.5794pt, -515.1891pt)
+ -- (341.5794pt, -515.1891pt)
+ -- (343.7383pt, -515.1891pt) -- cycle
+(346.6168pt, -514.4712pt) -- (344.4579pt, -514.4712pt)
+ -- (344.4579pt, -514.4712pt)
+ -- (344.4579pt, -515.1891pt)
+ -- (344.4579pt, -515.1891pt)
+ -- (346.6168pt, -515.1891pt) -- cycle
+(349.4953pt, -514.4712pt) -- (347.3364pt, -514.4712pt)
+ -- (347.3364pt, -514.4712pt)
+ -- (347.3364pt, -515.1891pt)
+ -- (347.3364pt, -515.1891pt)
+ -- (349.4953pt, -515.1891pt) -- cycle
+(352.3738pt, -514.4712pt) -- (350.2149pt, -514.4712pt)
+ -- (350.2149pt, -514.4712pt)
+ -- (350.2149pt, -515.1891pt)
+ -- (350.2149pt, -515.1891pt)
+ -- (352.3738pt, -515.1891pt) -- cycle
+(355.2523pt, -514.4712pt) -- (353.0935pt, -514.4712pt)
+ -- (353.0935pt, -514.4712pt)
+ -- (353.0935pt, -515.1891pt)
+ -- (353.0935pt, -515.1891pt)
+ -- (355.2523pt, -515.1891pt) -- cycle
+(358.1309pt, -514.4712pt) -- (355.972pt, -514.4712pt)
+ -- (355.972pt, -514.4712pt)
+ -- (355.972pt, -515.1891pt)
+ -- (355.972pt, -515.1891pt)
+ -- (358.1309pt, -515.1891pt) -- cycle
+(361.0094pt, -514.4712pt) -- (358.8505pt, -514.4712pt)
+ -- (358.8505pt, -514.4712pt)
+ -- (358.8505pt, -515.1891pt)
+ -- (358.8505pt, -515.1891pt)
+ -- (361.0094pt, -515.1891pt) -- cycle
+(363.8879pt, -514.4712pt) -- (361.729pt, -514.4712pt)
+ -- (361.729pt, -514.4712pt)
+ -- (361.729pt, -515.1891pt)
+ -- (361.729pt, -515.1891pt)
+ -- (363.8879pt, -515.1891pt) -- cycle
+(366.7664pt, -514.4712pt) -- (364.6075pt, -514.4712pt)
+ -- (364.6075pt, -514.4712pt)
+ -- (364.6075pt, -515.1891pt)
+ -- (364.6075pt, -515.1891pt)
+ -- (366.7664pt, -515.1891pt) -- cycle
+(369.645pt, -514.4712pt) -- (367.4861pt, -514.4712pt)
+ -- (367.4861pt, -514.4712pt)
+ -- (367.4861pt, -515.1891pt)
+ -- (367.4861pt, -515.1891pt)
+ -- (369.645pt, -515.1891pt) -- cycle
+(372.5235pt, -514.4712pt) -- (370.3646pt, -514.4712pt)
+ -- (370.3646pt, -514.4712pt)
+ -- (370.3646pt, -515.1891pt)
+ -- (370.3646pt, -515.1891pt)
+ -- (372.5235pt, -515.1891pt) -- cycle
+(375.402pt, -514.4712pt) -- (373.2431pt, -514.4712pt)
+ -- (373.2431pt, -514.4712pt)
+ -- (373.2431pt, -515.1891pt)
+ -- (373.2431pt, -515.1891pt)
+ -- (375.402pt, -515.1891pt) -- cycle
+(378.2805pt, -514.4712pt) -- (376.1216pt, -514.4712pt)
+ -- (376.1216pt, -514.4712pt)
+ -- (376.1216pt, -515.1891pt)
+ -- (376.1216pt, -515.1891pt)
+ -- (378.2805pt, -515.1891pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(233.2551,-492.7638){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(241.7708,-488.5759){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}H}
+\put(248.4873,-496.1141){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fp}
+\put(260.2712,-492.7638){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ T}
+\put(280.5408,-488.5759){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}H}
+\put(287.2573,-496.1141){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pw}
+\put(303.0892,-492.7638){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ T}
+\put(323.3588,-488.5759){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}H}
+\put(330.0753,-496.1141){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bp}
+\put(267.6374,-509.8346){\fontsize{14.04017}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(276.153,-505.6168){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}H}
+\put(282.8696,-513.1849){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}disp}
+\put(409.3545,-497.0515){\fontsize{14.04017}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Horizontal }
+\put(419.1894,-513.8032){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}retrace}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(87.75pt, -657.09pt) -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -657.09pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (485.2355pt, -399.8417pt)
+ -- (87.74999pt, -399.8417pt) -- cycle
+;
+\filldraw[color_29791][nonzero rule]
+(191.4366pt, -438.6199pt) -- (197.3736pt, -441.7209pt)
+ -- (197.3736pt, -441.7209pt)
+ -- (196.2941pt, -435.12pt) -- cycle
+(192.4761pt, -436.3963pt) -- (193.3956pt, -436.9747pt)
+ -- (193.3956pt, -436.9747pt)
+ -- (193.3157pt, -436.9048pt)
+ -- (193.3157pt, -436.9048pt)
+ -- (194.0153pt, -437.7225pt)
+ -- (194.0153pt, -437.7225pt)
+ -- (194.555pt, -437.2538pt)
+ -- (194.555pt, -437.2538pt)
+ -- (193.8654pt, -436.4462pt)
+ -- (193.8654pt, -436.4462pt) .. controls (193.8354pt, -436.4163pt) and (193.8154pt, -436.3864pt) .. (193.7854pt, -436.3764pt)
+ -- (193.7854pt, -436.3764pt)
+ -- (192.8659pt, -435.7881pt) -- cycle
+(189.9774pt, -435.0801pt) -- (190.3072pt, -435.2397pt)
+ -- (190.3072pt, -435.2397pt)
+ -- (191.4266pt, -435.808pt)
+ -- (191.4266pt, -435.808pt)
+ -- (191.8664pt, -436.0573pt)
+ -- (191.8664pt, -436.0573pt)
+ -- (192.2162pt, -435.4291pt)
+ -- (192.2162pt, -435.4291pt)
+ -- (191.7465pt, -435.1699pt)
+ -- (191.7465pt, -435.1699pt)
+ -- (190.6071pt, -434.5815pt)
+ -- (190.6071pt, -434.5815pt)
+ -- (190.2772pt, -434.432pt) -- cycle
+(187.3487pt, -433.9633pt) -- (187.8085pt, -434.1328pt)
+ -- (187.8085pt, -434.1328pt)
+ -- (189.0978pt, -434.6813pt)
+ -- (189.0978pt, -434.6813pt)
+ -- (189.3177pt, -434.781pt)
+ -- (189.3177pt, -434.781pt)
+ -- (189.6176pt, -434.1328pt)
+ -- (189.6176pt, -434.1328pt)
+ -- (189.3777pt, -434.0132pt)
+ -- (189.3777pt, -434.0132pt)
+ -- (188.0684pt, -433.4648pt)
+ -- (188.0684pt, -433.4648pt)
+ -- (187.6096pt, -433.2953pt) -- cycle
+(184.6631pt, -432.9861pt) -- (185.006pt, -433.0958pt)
+ -- (185.006pt, -433.0958pt)
+ -- (186.4432pt, -433.6143pt)
+ -- (186.4432pt, -433.6143pt)
+ -- (186.6781pt, -433.7041pt)
+ -- (186.6781pt, -433.7041pt)
+ -- (186.938pt, -433.036pt)
+ -- (186.938pt, -433.036pt)
+ -- (186.6851pt, -432.9363pt)
+ -- (186.6851pt, -432.9363pt)
+ -- (185.2288pt, -432.4178pt)
+ -- (185.2288pt, -432.4178pt)
+ -- (184.886pt, -432.2982pt) -- cycle
+(181.9225pt, -432.1386pt) -- (183.4997pt, -432.6072pt)
+ -- (183.4997pt, -432.6072pt)
+ -- (183.9785pt, -432.7668pt)
+ -- (183.9785pt, -432.7668pt)
+ -- (184.2024pt, -432.0788pt)
+ -- (184.2024pt, -432.0788pt)
+ -- (183.7056pt, -431.9193pt)
+ -- (183.7056pt, -431.9193pt)
+ -- (182.1284pt, -431.4506pt) -- cycle
+(179.155pt, -431.4008pt) -- (180.2904pt, -431.6899pt)
+ -- (180.2904pt, -431.6899pt)
+ -- (181.2369pt, -431.9492pt)
+ -- (181.2369pt, -431.9492pt)
+ -- (181.4268pt, -431.2611pt)
+ -- (181.4268pt, -431.2611pt)
+ -- (180.4693pt, -430.9919pt)
+ -- (180.4693pt, -430.9919pt)
+ -- (179.3339pt, -430.7028pt) -- cycle
+(176.3664pt, -430.7526pt) -- (176.8491pt, -430.8523pt)
+ -- (176.8491pt, -430.8523pt)
+ -- (178.4653pt, -431.2312pt)
+ -- (178.4653pt, -431.2312pt)
+ -- (178.6272pt, -430.5332pt)
+ -- (178.6272pt, -430.5332pt)
+ -- (176.9991pt, -430.1543pt)
+ -- (176.9991pt, -430.1543pt)
+ -- (176.5153pt, -430.0546pt) -- cycle
+(173.5518pt, -430.1842pt) -- (175.0571pt, -430.4734pt)
+ -- (175.0571pt, -430.4734pt)
+ -- (175.6617pt, -430.603pt)
+ -- (175.6617pt, -430.603pt)
+ -- (175.8117pt, -429.905pt)
+ -- (175.8117pt, -429.905pt)
+ -- (175.193pt, -429.7754pt)
+ -- (175.193pt, -429.7754pt)
+ -- (173.6868pt, -429.4863pt) -- cycle
+(170.7223pt, -429.7156pt) -- (172.8522pt, -430.0646pt)
+ -- (172.8522pt, -430.0646pt)
+ -- (172.9691pt, -429.3566pt)
+ -- (172.9691pt, -429.3566pt)
+ -- (170.8382pt, -429.0076pt) -- cycle
+(167.8858pt, -429.3068pt) -- (169.435pt, -429.5062pt)
+ -- (169.435pt, -429.5062pt)
+ -- (170.0117pt, -429.6059pt)
+ -- (170.0117pt, -429.6059pt)
+ -- (170.1276pt, -428.8979pt)
+ -- (170.1276pt, -428.8979pt)
+ -- (169.5259pt, -428.7982pt)
+ -- (169.5259pt, -428.7982pt)
+ -- (167.9767pt, -428.5988pt) -- cycle
+(165.0412pt, -428.9677pt) -- (165.512pt, -429.0076pt)
+ -- (165.512pt, -429.0076pt)
+ -- (167.1721pt, -429.217pt)
+ -- (167.1721pt, -429.217pt)
+ -- (167.2631pt, -428.5091pt)
+ -- (167.2631pt, -428.5091pt)
+ -- (165.5779pt, -428.2897pt)
+ -- (165.5779pt, -428.2897pt)
+ -- (165.1072pt, -428.2498pt) -- cycle
+(162.1747pt, -428.6985pt) -- (164.3246pt, -428.8979pt)
+ -- (164.3246pt, -428.8979pt)
+ -- (164.3906pt, -428.18pt)
+ -- (164.3906pt, -428.18pt)
+ -- (162.2417pt, -427.9806pt) -- cycle
+(159.3162pt, -428.519pt) -- (161.4721pt, -428.6287pt)
+ -- (161.4721pt, -428.6287pt)
+ -- (161.511pt, -427.9208pt)
+ -- (161.511pt, -427.9208pt)
+ -- (159.3551pt, -427.8011pt) -- cycle
+(156.4536pt, -428.3894pt) -- (157.4191pt, -428.4094pt)
+ -- (157.4191pt, -428.4094pt)
+ -- (158.5975pt, -428.4792pt)
+ -- (158.5975pt, -428.4792pt)
+ -- (158.6365pt, -427.7612pt)
+ -- (158.6365pt, -427.7612pt)
+ -- (157.4341pt, -427.6914pt)
+ -- (157.4341pt, -427.6914pt)
+ -- (156.4676pt, -427.6715pt) -- cycle
+(153.5751pt, -428.3296pt) -- (155.734pt, -428.3795pt)
+ -- (155.734pt, -428.3795pt)
+ -- (155.748pt, -427.6615pt)
+ -- (155.748pt, -427.6615pt)
+ -- (153.5891pt, -427.6117pt) -- cycle
+(150.7915pt, -428.5888pt) -- (151.3043pt, -428.4891pt)
+ -- (151.3043pt, -428.4891pt)
+ -- (152.3058pt, -428.3595pt)
+ -- (152.3058pt, -428.3595pt)
+ -- (152.8765pt, -428.3395pt)
+ -- (152.8765pt, -428.3395pt)
+ -- (152.8505pt, -427.6316pt)
+ -- (152.8505pt, -427.6316pt)
+ -- (152.2178pt, -427.6516pt)
+ -- (152.2178pt, -427.6516pt)
+ -- (151.1654pt, -427.7812pt)
+ -- (151.1654pt, -427.7812pt)
+ -- (150.6526pt, -427.8809pt) -- cycle
+(148.1139pt, -429.3865pt) -- (148.2818pt, -429.3167pt)
+ -- (148.2818pt, -429.3167pt)
+ -- (149.2913pt, -428.9677pt)
+ -- (149.2913pt, -428.9677pt)
+ -- (150.1179pt, -428.7284pt)
+ -- (150.1179pt, -428.7284pt)
+ -- (149.921pt, -428.0404pt)
+ -- (149.921pt, -428.0404pt)
+ -- (149.0555pt, -428.2897pt)
+ -- (149.0555pt, -428.2897pt)
+ -- (147.996pt, -428.6586pt)
+ -- (147.996pt, -428.6586pt)
+ -- (147.8271pt, -428.7284pt) -- cycle
+(145.5802pt, -430.6529pt) -- (146.2729pt, -430.254pt)
+ -- (146.2729pt, -430.254pt)
+ -- (147.2814pt, -429.7455pt)
+ -- (147.2814pt, -429.7455pt)
+ -- (147.4533pt, -429.6757pt)
+ -- (147.4533pt, -429.6757pt)
+ -- (147.1674pt, -429.0176pt)
+ -- (147.1674pt, -429.0176pt)
+ -- (146.9575pt, -429.1074pt)
+ -- (146.9575pt, -429.1074pt)
+ -- (145.9121pt, -429.6358pt)
+ -- (145.9121pt, -429.6358pt)
+ -- (145.2194pt, -430.0347pt) -- cycle
+(143.2484pt, -432.2383pt) -- (143.2754pt, -432.2184pt)
+ -- (143.2754pt, -432.2184pt)
+ -- (144.2739pt, -431.4905pt)
+ -- (144.2739pt, -431.4905pt)
+ -- (144.9855pt, -431.0218pt)
+ -- (144.9855pt, -431.0218pt)
+ -- (144.5897pt, -430.4235pt)
+ -- (144.5897pt, -430.4235pt)
+ -- (143.8481pt, -430.9121pt)
+ -- (143.8481pt, -430.9121pt)
+ -- (142.8227pt, -431.66pt)
+ -- (142.8227pt, -431.66pt)
+ -- (142.7967pt, -431.6799pt) -- cycle
+(141.0815pt, -434.083pt) -- (141.2954pt, -433.8835pt)
+ -- (141.2954pt, -433.8835pt)
+ -- (142.2819pt, -433.0161pt)
+ -- (142.2819pt, -433.0161pt)
+ -- (142.6887pt, -432.687pt)
+ -- (142.6887pt, -432.687pt)
+ -- (142.237pt, -432.1286pt)
+ -- (142.237pt, -432.1286pt)
+ -- (141.8072pt, -432.4776pt)
+ -- (141.8072pt, -432.4776pt)
+ -- (140.7997pt, -433.3651pt)
+ -- (140.7997pt, -433.3651pt)
+ -- (140.5868pt, -433.5645pt) -- cycle
+(139.0746pt, -436.1072pt) -- (139.3284pt, -435.828pt)
+ -- (139.3284pt, -435.828pt)
+ -- (140.3089pt, -434.8109pt)
+ -- (140.3089pt, -434.8109pt)
+ -- (140.5588pt, -434.5815pt)
+ -- (140.5588pt, -434.5815pt)
+ -- (140.0641pt, -434.063pt)
+ -- (140.0641pt, -434.063pt)
+ -- (139.7922pt, -434.3123pt)
+ -- (139.7922pt, -434.3123pt)
+ -- (138.7937pt, -435.3394pt)
+ -- (138.7937pt, -435.3394pt)
+ -- (138.5399pt, -435.6186pt) -- cycle
+(137.2036pt, -438.2609pt) -- (137.3924pt, -438.0216pt)
+ -- (137.3924pt, -438.0216pt)
+ -- (138.36pt, -436.8949pt)
+ -- (138.36pt, -436.8949pt)
+ -- (138.5918pt, -436.6356pt)
+ -- (138.5918pt, -436.6356pt)
+ -- (138.0581pt, -436.157pt)
+ -- (138.0581pt, -436.157pt)
+ -- (137.8132pt, -436.4262pt)
+ -- (137.8132pt, -436.4262pt)
+ -- (136.8317pt, -437.5729pt)
+ -- (136.8317pt, -437.5729pt)
+ -- (136.6418pt, -437.8123pt) -- cycle
+(135.4565pt, -440.5145pt) -- (135.4864pt, -440.4745pt)
+ -- (135.4864pt, -440.4745pt)
+ -- (136.4329pt, -439.2182pt)
+ -- (136.4329pt, -439.2182pt)
+ -- (136.7528pt, -438.8193pt)
+ -- (136.7528pt, -438.8193pt)
+ -- (136.1911pt, -438.3706pt)
+ -- (136.1911pt, -438.3706pt)
+ -- (135.8572pt, -438.7894pt)
+ -- (135.8572pt, -438.7894pt)
+ -- (134.8997pt, -440.0558pt)
+ -- (134.8997pt, -440.0558pt)
+ -- (134.8708pt, -440.0957pt) -- cycle
+(133.8173pt, -442.8677pt) -- (134.5389pt, -441.8007pt)
+ -- (134.5389pt, -441.8007pt)
+ -- (135.0387pt, -441.1028pt)
+ -- (135.0387pt, -441.1028pt)
+ -- (134.453pt, -440.684pt)
+ -- (134.453pt, -440.684pt)
+ -- (133.9432pt, -441.3919pt)
+ -- (133.9432pt, -441.3919pt)
+ -- (133.2206pt, -442.4589pt) -- cycle
+(132.2831pt, -445.2708pt) -- (132.6889pt, -444.6126pt)
+ -- (132.6889pt, -444.6126pt)
+ -- (133.4265pt, -443.456pt)
+ -- (133.4265pt, -443.456pt)
+ -- (132.8198pt, -443.0671pt)
+ -- (132.8198pt, -443.0671pt)
+ -- (132.0752pt, -444.2337pt)
+ -- (132.0752pt, -444.2337pt)
+ -- (131.6694pt, -444.9018pt) -- cycle
+(130.8278pt, -447.7336pt) -- (130.8748pt, -447.6439pt)
+ -- (130.8748pt, -447.6439pt)
+ -- (131.7783pt, -446.0983pt)
+ -- (131.7783pt, -446.0983pt)
+ -- (131.9083pt, -445.889pt)
+ -- (131.9083pt, -445.889pt)
+ -- (131.2946pt, -445.51pt)
+ -- (131.2946pt, -445.51pt)
+ -- (131.1567pt, -445.7394pt)
+ -- (131.1567pt, -445.7394pt)
+ -- (130.2461pt, -447.2949pt)
+ -- (130.2461pt, -447.2949pt)
+ -- (130.1982pt, -447.3846pt) -- cycle
+(129.4535pt, -450.2464pt) -- (129.9863pt, -449.2493pt)
+ -- (129.9863pt, -449.2493pt)
+ -- (130.479pt, -448.3618pt)
+ -- (130.479pt, -448.3618pt)
+ -- (129.8493pt, -448.0128pt)
+ -- (129.8493pt, -448.0128pt)
+ -- (129.3506pt, -448.9102pt)
+ -- (129.3506pt, -448.9102pt)
+ -- (128.8179pt, -449.9174pt) -- cycle
+(128.1462pt, -452.7891pt) -- (128.2382pt, -452.5996pt)
+ -- (128.2382pt, -452.5996pt)
+ -- (129.1047pt, -450.9045pt)
+ -- (129.1047pt, -450.9045pt)
+ -- (129.1157pt, -450.8846pt)
+ -- (129.1157pt, -450.8846pt)
+ -- (128.48pt, -450.5455pt)
+ -- (128.48pt, -450.5455pt)
+ -- (128.463pt, -450.5754pt)
+ -- (128.463pt, -450.5754pt)
+ -- (127.5905pt, -452.2905pt)
+ -- (127.5905pt, -452.2905pt)
+ -- (127.4985pt, -452.4799pt) -- cycle
+(126.9099pt, -455.3816pt) -- (127.3856pt, -454.3645pt)
+ -- (127.3856pt, -454.3645pt)
+ -- (127.8334pt, -453.4372pt)
+ -- (127.8334pt, -453.4372pt)
+ -- (127.1857pt, -453.1281pt)
+ -- (127.1857pt, -453.1281pt)
+ -- (126.7339pt, -454.0554pt)
+ -- (126.7339pt, -454.0554pt)
+ -- (126.2582pt, -455.0724pt) -- cycle
+(125.7305pt, -457.994pt) -- (126.542pt, -456.1693pt)
+ -- (126.542pt, -456.1693pt)
+ -- (126.605pt, -456.0297pt)
+ -- (126.605pt, -456.0297pt)
+ -- (125.9533pt, -455.7306pt)
+ -- (125.9533pt, -455.7306pt)
+ -- (125.8834pt, -455.8802pt)
+ -- (125.8834pt, -455.8802pt)
+ -- (125.0728pt, -457.7049pt) -- cycle
+(124.617pt, -460.6265pt) -- (124.9049pt, -459.9085pt)
+ -- (124.9049pt, -459.9085pt)
+ -- (125.4476pt, -458.6522pt)
+ -- (125.4476pt, -458.6522pt)
+ -- (124.7869pt, -458.363pt)
+ -- (124.7869pt, -458.363pt)
+ -- (124.2372pt, -459.6393pt)
+ -- (124.2372pt, -459.6393pt)
+ -- (123.9494pt, -460.3572pt) -- cycle
+(123.5456pt, -463.2888pt) -- (124.3492pt, -461.2946pt)
+ -- (124.3492pt, -461.2946pt)
+ -- (123.6805pt, -461.0253pt)
+ -- (123.6805pt, -461.0253pt)
+ -- (122.8769pt, -463.0196pt) -- cycle
+(122.5391pt, -465.9711pt) -- (123.2847pt, -463.9469pt)
+ -- (123.2847pt, -463.9469pt)
+ -- (122.6091pt, -463.6976pt)
+ -- (122.6091pt, -463.6976pt)
+ -- (121.8634pt, -465.7218pt) -- cycle
+(121.5666pt, -468.6633pt) -- (121.8155pt, -467.9254pt)
+ -- (121.8155pt, -467.9254pt)
+ -- (122.2902pt, -466.6491pt)
+ -- (122.2902pt, -466.6491pt)
+ -- (121.6146pt, -466.3998pt)
+ -- (121.6146pt, -466.3998pt)
+ -- (121.1338pt, -467.6961pt)
+ -- (121.1338pt, -467.6961pt)
+ -- (120.8849pt, -468.434pt) -- cycle
+(120.6441pt, -471.3854pt) -- (121.3367pt, -469.3413pt)
+ -- (121.3367pt, -469.3413pt)
+ -- (120.6551pt, -469.112pt)
+ -- (120.6551pt, -469.112pt)
+ -- (119.9624pt, -471.1561pt) -- cycle
+(119.7725pt, -474.1076pt) -- (120.3722pt, -472.1831pt)
+ -- (120.3722pt, -472.1831pt)
+ -- (120.4132pt, -472.0635pt)
+ -- (120.4132pt, -472.0635pt)
+ -- (119.7315pt, -471.8342pt)
+ -- (119.7315pt, -471.8342pt)
+ -- (119.6846pt, -471.9738pt)
+ -- (119.6846pt, -471.9738pt)
+ -- (119.0849pt, -473.8982pt) -- cycle
+(118.9259pt, -476.8497pt) -- (119.0029pt, -476.5804pt)
+ -- (119.0029pt, -476.5804pt)
+ -- (119.5586pt, -474.7956pt)
+ -- (119.5586pt, -474.7956pt)
+ -- (118.871pt, -474.5862pt)
+ -- (118.871pt, -474.5862pt)
+ -- (118.3103pt, -476.381pt)
+ -- (118.3103pt, -476.381pt)
+ -- (118.2343pt, -476.6503pt) -- cycle
+(118.1324pt, -479.6117pt) -- (118.7281pt, -477.5377pt)
+ -- (118.7281pt, -477.5377pt)
+ -- (118.0364pt, -477.3383pt)
+ -- (118.0364pt, -477.3383pt)
+ -- (117.4407pt, -479.4123pt) -- cycle
+(117.3737pt, -482.3638pt) -- (117.7006pt, -481.1074pt)
+ -- (117.7006pt, -481.1074pt)
+ -- (117.9345pt, -480.2997pt)
+ -- (117.9345pt, -480.2997pt)
+ -- (117.2428pt, -480.1003pt)
+ -- (117.2428pt, -480.1003pt)
+ -- (117.0039pt, -480.9279pt)
+ -- (117.0039pt, -480.9279pt)
+ -- (116.6771pt, -482.1843pt) -- cycle
+(116.6521pt, -485.1458pt) -- (117.1938pt, -483.0618pt)
+ -- (117.1938pt, -483.0618pt)
+ -- (116.4972pt, -482.8823pt)
+ -- (116.4972pt, -482.8823pt)
+ -- (115.9555pt, -484.9663pt) -- cycle
+(115.9785pt, -487.9277pt) -- (116.4742pt, -485.8338pt)
+ -- (116.4742pt, -485.8338pt)
+ -- (115.7746pt, -485.6743pt)
+ -- (115.7746pt, -485.6743pt)
+ -- (115.2778pt, -487.7682pt) -- cycle
+(115.3208pt, -490.7197pt) -- (115.3578pt, -490.5502pt)
+ -- (115.3578pt, -490.5502pt)
+ -- (115.8126pt, -488.6257pt)
+ -- (115.8126pt, -488.6257pt)
+ -- (115.1119pt, -488.4662pt)
+ -- (115.1119pt, -488.4662pt)
+ -- (114.6541pt, -490.4006pt)
+ -- (114.6541pt, -490.4006pt)
+ -- (114.6172pt, -490.5701pt) -- cycle
+(114.7191pt, -493.5316pt) -- (115.1709pt, -491.4177pt)
+ -- (115.1709pt, -491.4177pt)
+ -- (114.4673pt, -491.2681pt)
+ -- (114.4673pt, -491.2681pt)
+ -- (114.0155pt, -493.382pt) -- cycle
+(114.1384pt, -496.3335pt) -- (114.3103pt, -495.4361pt)
+ -- (114.3103pt, -495.4361pt)
+ -- (114.5682pt, -494.2296pt)
+ -- (114.5682pt, -494.2296pt)
+ -- (113.8646pt, -494.08pt)
+ -- (113.8646pt, -494.08pt)
+ -- (113.6027pt, -495.2965pt)
+ -- (113.6027pt, -495.2965pt)
+ -- (113.4308pt, -496.1939pt) -- cycle
+(113.5987pt, -499.1554pt) -- (114.0035pt, -497.0415pt)
+ -- (114.0035pt, -497.0415pt)
+ -- (113.2959pt, -496.9019pt)
+ -- (113.2959pt, -496.9019pt)
+ -- (112.8921pt, -499.0158pt) -- cycle
+(113.095pt, -501.9772pt) -- (113.3588pt, -500.4018pt)
+ -- (113.3588pt, -500.4018pt)
+ -- (113.4638pt, -499.8633pt)
+ -- (113.4638pt, -499.8633pt)
+ -- (112.7571pt, -499.7237pt)
+ -- (112.7571pt, -499.7237pt)
+ -- (112.6492pt, -500.2821pt)
+ -- (112.6492pt, -500.2821pt)
+ -- (112.3853pt, -501.8576pt) -- cycle
+(112.6182pt, -504.8091pt) -- (112.976pt, -502.6852pt)
+ -- (112.976pt, -502.6852pt)
+ -- (112.2664pt, -502.5656pt)
+ -- (112.2664pt, -502.5656pt)
+ -- (111.9086pt, -504.6894pt) -- cycle
+(112.1894pt, -507.6409pt) -- (112.5003pt, -505.507pt)
+ -- (112.5003pt, -505.507pt)
+ -- (111.7886pt, -505.3974pt)
+ -- (111.7886pt, -505.3974pt)
+ -- (111.4778pt, -507.5312pt) -- cycle
+(111.7746pt, -510.4827pt) -- (112.0865pt, -508.3489pt)
+ -- (112.0865pt, -508.3489pt)
+ -- (111.3738pt, -508.2392pt)
+ -- (111.3738pt, -508.2392pt)
+ -- (111.063pt, -510.373pt) -- cycle
+(111.4168pt, -513.3245pt) -- (111.6837pt, -511.1807pt)
+ -- (111.6837pt, -511.1807pt)
+ -- (110.97pt, -511.0909pt)
+ -- (110.97pt, -511.0909pt)
+ -- (110.7022pt, -513.2347pt) -- cycle
+(111.068pt, -516.1663pt) -- (111.106pt, -515.7974pt)
+ -- (111.106pt, -515.7974pt)
+ -- (111.3269pt, -514.0325pt)
+ -- (111.3269pt, -514.0325pt)
+ -- (110.6132pt, -513.9427pt)
+ -- (110.6132pt, -513.9427pt)
+ -- (110.3904pt, -515.7177pt)
+ -- (110.3904pt, -515.7177pt)
+ -- (110.3524pt, -516.0865pt) -- cycle
+(110.7751pt, -519.0181pt) -- (110.995pt, -516.8743pt)
+ -- (110.995pt, -516.8743pt)
+ -- (110.2794pt, -516.8045pt)
+ -- (110.2794pt, -516.8045pt)
+ -- (110.0585pt, -518.9483pt) -- cycle
+(110.5003pt, -521.8699pt) -- (110.5673pt, -521.0422pt)
+ -- (110.5673pt, -521.0422pt)
+ -- (110.7012pt, -519.736pt)
+ -- (110.7012pt, -519.736pt)
+ -- (109.9855pt, -519.6563pt)
+ -- (109.9855pt, -519.6563pt)
+ -- (109.8496pt, -520.9824pt)
+ -- (109.8496pt, -520.9824pt)
+ -- (109.7827pt, -521.8101pt) -- cycle
+(110.2694pt, -524.7316pt) -- (110.4423pt, -522.5878pt)
+ -- (110.4423pt, -522.5878pt)
+ -- (109.7247pt, -522.528pt)
+ -- (109.7247pt, -522.528pt)
+ -- (109.5518pt, -524.6718pt) -- cycle
+(110.0675pt, -527.5934pt) -- (110.1405pt, -526.327pt)
+ -- (110.1405pt, -526.327pt)
+ -- (110.2114pt, -525.4496pt)
+ -- (110.2114pt, -525.4496pt)
+ -- (109.4948pt, -525.3897pt)
+ -- (109.4948pt, -525.3897pt)
+ -- (109.4218pt, -526.2872pt)
+ -- (109.4218pt, -526.2872pt)
+ -- (109.3489pt, -527.5435pt) -- cycle
+(109.9026pt, -530.4551pt) -- (110.0265pt, -528.3013pt)
+ -- (110.0265pt, -528.3013pt)
+ -- (109.3079pt, -528.2615pt)
+ -- (109.3079pt, -528.2615pt)
+ -- (109.184pt, -530.4152pt) -- cycle
+(109.7747pt, -533.3169pt) -- (109.8336pt, -531.6517pt)
+ -- (109.8336pt, -531.6517pt)
+ -- (109.8606pt, -531.1731pt)
+ -- (109.8606pt, -531.1731pt)
+ -- (109.143pt, -531.1332pt)
+ -- (109.143pt, -531.1332pt)
+ -- (109.114pt, -531.6218pt)
+ -- (109.114pt, -531.6218pt)
+ -- (109.056pt, -533.287pt) -- cycle
+(109.6747pt, -536.1886pt) -- (109.7497pt, -534.0348pt)
+ -- (109.7497pt, -534.0348pt)
+ -- (109.031pt, -534.0049pt)
+ -- (109.031pt, -534.0049pt)
+ -- (108.9551pt, -536.1587pt) -- cycle
+(109.6197pt, -539.0504pt) -- (109.6457pt, -536.9863pt)
+ -- (109.6457pt, -536.9863pt)
+ -- (109.6487pt, -536.9065pt)
+ -- (109.6487pt, -536.9065pt)
+ -- (108.9301pt, -536.8766pt)
+ -- (108.9301pt, -536.8766pt)
+ -- (108.9261pt, -536.9763pt)
+ -- (108.9261pt, -536.9763pt)
+ -- (108.9011pt, -539.0404pt) -- cycle
+(109.5838pt, -541.9221pt) -- (109.6107pt, -539.7683pt)
+ -- (109.6107pt, -539.7683pt)
+ -- (108.8921pt, -539.7583pt)
+ -- (108.8921pt, -539.7583pt)
+ -- (108.8641pt, -541.9121pt) -- cycle
+(109.6637pt, -544.7738pt) -- (109.5888pt, -542.6201pt)
+ -- (109.5888pt, -542.6201pt)
+ -- (108.8691pt, -542.65pt)
+ -- (108.8691pt, -542.65pt)
+ -- (108.9451pt, -544.8037pt) -- cycle
+(109.7637pt, -547.6456pt) -- (109.6887pt, -545.4918pt)
+ -- (109.6887pt, -545.4918pt)
+ -- (108.9701pt, -545.5117pt)
+ -- (108.9701pt, -545.5117pt)
+ -- (109.045pt, -547.6655pt) -- cycle
+(110.0595pt, -550.4774pt) -- (109.8336pt, -548.3336pt)
+ -- (109.8336pt, -548.3336pt)
+ -- (109.118pt, -548.4034pt)
+ -- (109.118pt, -548.4034pt)
+ -- (109.3439pt, -550.5472pt) -- cycle
+(110.3773pt, -553.3092pt) -- (110.3234pt, -552.9901pt)
+ -- (110.3234pt, -552.9901pt)
+ -- (110.1345pt, -551.1854pt)
+ -- (110.1345pt, -551.1854pt)
+ -- (109.4188pt, -551.2651pt)
+ -- (109.4188pt, -551.2651pt)
+ -- (109.6137pt, -553.1198pt)
+ -- (109.6137pt, -553.1198pt)
+ -- (109.6677pt, -553.4289pt) -- cycle
+(110.8661pt, -556.1311pt) -- (110.4993pt, -554.0072pt)
+ -- (110.4993pt, -554.0072pt)
+ -- (109.7907pt, -554.1368pt)
+ -- (109.7907pt, -554.1368pt)
+ -- (110.1575pt, -556.2607pt) -- cycle
+(111.3918pt, -558.933pt) -- (111.2409pt, -558.3029pt)
+ -- (111.2409pt, -558.3029pt)
+ -- (110.989pt, -556.8391pt)
+ -- (110.989pt, -556.8391pt)
+ -- (110.2794pt, -556.9687pt)
+ -- (110.2794pt, -556.9687pt)
+ -- (110.5403pt, -558.4703pt)
+ -- (110.5403pt, -558.4703pt)
+ -- (110.6922pt, -559.1005pt) -- cycle
+(112.0645pt, -561.726pt) -- (111.5607pt, -559.631pt)
+ -- (111.5607pt, -559.631pt)
+ -- (110.8601pt, -559.7985pt)
+ -- (110.8601pt, -559.7985pt)
+ -- (111.3648pt, -561.8935pt) -- cycle
+(112.7851pt, -564.4821pt) -- (112.5093pt, -563.5767pt)
+ -- (112.5093pt, -563.5767pt)
+ -- (112.2324pt, -562.424pt)
+ -- (112.2324pt, -562.424pt)
+ -- (111.5328pt, -562.5914pt)
+ -- (111.5328pt, -562.5914pt)
+ -- (111.8206pt, -563.785pt)
+ -- (111.8206pt, -563.785pt)
+ -- (112.0975pt, -564.6914pt) -- cycle
+(113.6237pt, -567.2301pt) -- (112.995pt, -565.1691pt)
+ -- (112.995pt, -565.1691pt)
+ -- (112.3064pt, -565.3784pt)
+ -- (112.3064pt, -565.3784pt)
+ -- (112.935pt, -567.4385pt) -- cycle
+(114.5222pt, -569.9343pt) -- (114.1064pt, -568.8135pt)
+ -- (114.1064pt, -568.8135pt)
+ -- (113.8336pt, -567.9161pt)
+ -- (113.8336pt, -567.9161pt)
+ -- (113.1449pt, -568.1255pt)
+ -- (113.1449pt, -568.1255pt)
+ -- (113.4318pt, -569.0628pt)
+ -- (113.4318pt, -569.0628pt)
+ -- (113.8466pt, -570.1836pt) -- cycle
+(115.5207pt, -572.6276pt) -- (114.7711pt, -570.6083pt)
+ -- (114.7711pt, -570.6083pt)
+ -- (114.0964pt, -570.8566pt)
+ -- (114.0964pt, -570.8566pt)
+ -- (114.8451pt, -572.8768pt) -- cycle
+(116.5832pt, -575.2739pt) -- (116.0255pt, -573.9926pt)
+ -- (116.0255pt, -573.9926pt)
+ -- (115.7696pt, -573.3016pt)
+ -- (115.7696pt, -573.3016pt)
+ -- (115.0949pt, -573.5499pt)
+ -- (115.0949pt, -573.5499pt)
+ -- (115.3658pt, -574.2787pt)
+ -- (115.3658pt, -574.2787pt)
+ -- (115.9235pt, -575.5601pt) -- cycle
+(117.7306pt, -577.9073pt) -- (116.87pt, -575.932pt)
+ -- (116.87pt, -575.932pt)
+ -- (116.2104pt, -576.2181pt)
+ -- (116.2104pt, -576.2181pt)
+ -- (117.0709pt, -578.1935pt) -- cycle
+(118.9449pt, -580.4889pt) -- (118.2583pt, -579.1198pt)
+ -- (118.2583pt, -579.1198pt)
+ -- (118.0174pt, -578.5664pt)
+ -- (118.0174pt, -578.5664pt)
+ -- (117.3578pt, -578.8526pt)
+ -- (117.3578pt, -578.8526pt)
+ -- (117.6156pt, -579.4419pt)
+ -- (117.6156pt, -579.4419pt)
+ -- (118.3023pt, -580.8099pt) -- cycle
+(120.2343pt, -583.0565pt) -- (119.2678pt, -581.13pt)
+ -- (119.2678pt, -581.13pt)
+ -- (118.6241pt, -581.4521pt)
+ -- (118.6241pt, -581.4521pt)
+ -- (119.5906pt, -583.3776pt) -- cycle
+(121.5876pt, -585.5692pt) -- (120.791pt, -584.1672pt)
+ -- (120.791pt, -584.1672pt)
+ -- (120.5561pt, -583.6986pt)
+ -- (120.5561pt, -583.6986pt)
+ -- (119.9135pt, -584.0197pt)
+ -- (119.9135pt, -584.0197pt)
+ -- (120.1653pt, -584.5212pt)
+ -- (120.1653pt, -584.5212pt)
+ -- (120.9619pt, -585.9232pt) -- cycle
+(123.0069pt, -588.067pt) -- (121.9424pt, -586.1934pt)
+ -- (121.9424pt, -586.1934pt)
+ -- (121.3167pt, -586.5474pt)
+ -- (121.3167pt, -586.5474pt)
+ -- (122.3812pt, -588.421pt) -- cycle
+(124.4861pt, -590.509pt) -- (123.6155pt, -589.1399pt)
+ -- (123.6155pt, -589.1399pt)
+ -- (123.3617pt, -588.6922pt)
+ -- (123.3617pt, -588.6922pt)
+ -- (122.736pt, -589.0462pt)
+ -- (122.736pt, -589.0462pt)
+ -- (123.0079pt, -589.5238pt)
+ -- (123.0079pt, -589.5238pt)
+ -- (123.8784pt, -590.8939pt) -- cycle
+(126.0273pt, -592.935pt) -- (124.8709pt, -591.1152pt)
+ -- (124.8709pt, -591.1152pt)
+ -- (124.2632pt, -591.5001pt)
+ -- (124.2632pt, -591.5001pt)
+ -- (125.4196pt, -593.3188pt) -- cycle
+(127.6205pt, -595.3052pt) -- (126.7099pt, -594.0089pt)
+ -- (126.7099pt, -594.0089pt)
+ -- (126.4121pt, -593.5413pt)
+ -- (126.4121pt, -593.5413pt)
+ -- (125.8044pt, -593.9251pt)
+ -- (125.8044pt, -593.9251pt)
+ -- (126.1203pt, -594.4217pt)
+ -- (126.1203pt, -594.4217pt)
+ -- (127.0318pt, -595.7169pt) -- cycle
+(129.2736pt, -597.6554pt) -- (128.0343pt, -595.8925pt)
+ -- (128.0343pt, -595.8925pt)
+ -- (127.4446pt, -596.3053pt)
+ -- (127.4446pt, -596.3053pt)
+ -- (128.6849pt, -598.0682pt) -- cycle
+(130.9727pt, -599.9518pt) -- (130.0652pt, -598.7821pt)
+ -- (130.0652pt, -598.7821pt)
+ -- (129.6874pt, -598.2437pt)
+ -- (129.6874pt, -598.2437pt)
+ -- (129.0977pt, -598.6555pt)
+ -- (129.0977pt, -598.6555pt)
+ -- (129.4965pt, -599.2219pt)
+ -- (129.4965pt, -599.2219pt)
+ -- (130.4041pt, -600.3915pt) -- cycle
+(132.7348pt, -602.2232pt) -- (131.4135pt, -600.5201pt)
+ -- (131.4135pt, -600.5201pt)
+ -- (130.8448pt, -600.9589pt)
+ -- (130.8448pt, -600.9589pt)
+ -- (132.1661pt, -602.6619pt) -- cycle
+(134.5329pt, -604.4448pt) -- (133.6764pt, -603.4357pt)
+ -- (133.6764pt, -603.4357pt)
+ -- (133.1756pt, -602.7905pt)
+ -- (133.1756pt, -602.7905pt)
+ -- (132.6069pt, -603.2303pt)
+ -- (132.6069pt, -603.2303pt)
+ -- (133.1266pt, -603.9004pt)
+ -- (133.1266pt, -603.9004pt)
+ -- (133.9832pt, -604.9084pt) -- cycle
+(136.393pt, -606.6365pt) -- (134.9977pt, -604.9922pt)
+ -- (134.9977pt, -604.9922pt)
+ -- (134.449pt, -605.4569pt)
+ -- (134.449pt, -605.4569pt)
+ -- (135.8443pt, -607.1001pt) -- cycle
+(138.28pt, -608.7823pt) -- (137.5264pt, -607.9706pt)
+ -- (137.5264pt, -607.9706pt)
+ -- (136.8577pt, -607.1839pt)
+ -- (136.8577pt, -607.1839pt)
+ -- (136.309pt, -607.6476pt)
+ -- (136.309pt, -607.6476pt)
+ -- (136.9977pt, -608.4592pt)
+ -- (136.9977pt, -608.4592pt)
+ -- (137.7523pt, -609.2709pt) -- cycle
+(140.237pt, -610.8882pt) -- (138.7687pt, -609.3088pt)
+ -- (138.7687pt, -609.3088pt)
+ -- (138.241pt, -609.7974pt)
+ -- (138.241pt, -609.7974pt)
+ -- (139.7093pt, -611.3768pt) -- cycle
+(142.209pt, -612.9592pt) -- (141.6083pt, -612.365pt)
+ -- (141.6083pt, -612.365pt)
+ -- (140.7257pt, -611.4147pt)
+ -- (140.7257pt, -611.4147pt)
+ -- (140.198pt, -611.9033pt)
+ -- (140.198pt, -611.9033pt)
+ -- (141.1015pt, -612.8745pt)
+ -- (141.1015pt, -612.8745pt)
+ -- (141.7012pt, -613.4688pt) -- cycle
+(144.2509pt, -614.9834pt) -- (142.7187pt, -613.4658pt)
+ -- (142.7187pt, -613.4658pt)
+ -- (142.212pt, -613.9753pt)
+ -- (142.212pt, -613.9753pt)
+ -- (143.7442pt, -615.4929pt) -- cycle
+(146.2979pt, -616.9796pt) -- (145.9001pt, -616.6177pt)
+ -- (145.9001pt, -616.6177pt)
+ -- (144.7617pt, -615.489pt)
+ -- (144.7617pt, -615.489pt)
+ -- (144.2549pt, -615.9985pt)
+ -- (144.2549pt, -615.9985pt)
+ -- (145.4153pt, -617.1482pt)
+ -- (145.4153pt, -617.1482pt)
+ -- (145.8131pt, -617.5101pt) -- cycle
+(148.4248pt, -618.915pt) -- (146.8296pt, -617.4633pt)
+ -- (146.8296pt, -617.4633pt)
+ -- (146.3448pt, -617.9937pt)
+ -- (146.3448pt, -617.9937pt)
+ -- (147.94pt, -619.4456pt) -- cycle
+(150.5457pt, -620.8345pt) -- (150.4018pt, -620.7129pt)
+ -- (150.4018pt, -620.7129pt)
+ -- (148.9565pt, -619.3987pt)
+ -- (148.9565pt, -619.3987pt)
+ -- (148.4718pt, -619.9291pt)
+ -- (148.4718pt, -619.9291pt)
+ -- (149.939pt, -621.2633pt)
+ -- (149.939pt, -621.2633pt)
+ -- (150.0839pt, -621.3839pt) -- cycle
+(152.7516pt, -622.6802pt) -- (151.0974pt, -621.2952pt)
+ -- (151.0974pt, -621.2952pt)
+ -- (150.6346pt, -621.8456pt)
+ -- (150.6346pt, -621.8456pt)
+ -- (152.2888pt, -623.2296pt) -- cycle
+(154.9564pt, -624.5259pt) -- (153.3023pt, -623.1409pt)
+ -- (153.3023pt, -623.1409pt)
+ -- (152.8405pt, -623.6913pt)
+ -- (152.8405pt, -623.6913pt)
+ -- (154.4937pt, -625.0753pt) -- cycle
+(157.2192pt, -626.2759pt) -- (155.5101pt, -624.9606pt)
+ -- (155.5101pt, -624.9606pt)
+ -- (155.0704pt, -625.529pt)
+ -- (155.0704pt, -625.529pt)
+ -- (156.7805pt, -626.8442pt) -- cycle
+(159.4991pt, -628.0298pt) -- (157.7899pt, -626.7146pt)
+ -- (157.7899pt, -626.7146pt)
+ -- (157.3502pt, -627.283pt)
+ -- (157.3502pt, -627.283pt)
+ -- (159.0593pt, -628.5981pt) -- cycle
+(161.8219pt, -629.701pt) -- (160.0608pt, -628.4556pt)
+ -- (160.0608pt, -628.4556pt)
+ -- (159.644pt, -629.0409pt)
+ -- (159.644pt, -629.0409pt)
+ -- (161.4051pt, -630.2863pt) -- cycle
+(164.1697pt, -631.3612pt) -- (162.4086pt, -630.1158pt)
+ -- (162.4086pt, -630.1158pt)
+ -- (161.9928pt, -630.701pt)
+ -- (161.9928pt, -630.701pt)
+ -- (163.7539pt, -631.9465pt) -- cycle
+(166.5484pt, -632.9516pt) -- (164.9912pt, -631.9425pt)
+ -- (164.9912pt, -631.9425pt)
+ -- (164.7574pt, -631.776pt)
+ -- (164.7574pt, -631.776pt)
+ -- (164.3416pt, -632.3623pt)
+ -- (164.3416pt, -632.3623pt)
+ -- (164.5995pt, -632.5448pt)
+ -- (164.5995pt, -632.5448pt)
+ -- (166.1566pt, -633.5538pt) -- cycle
+(168.9622pt, -634.5171pt) -- (167.1521pt, -633.3434pt)
+ -- (167.1521pt, -633.3434pt)
+ -- (166.7603pt, -633.9447pt)
+ -- (166.7603pt, -633.9447pt)
+ -- (168.5704pt, -635.1183pt) -- cycle
+(171.394pt, -636.0237pt) -- (170.1806pt, -635.3068pt)
+ -- (170.1806pt, -635.3068pt)
+ -- (169.5659pt, -634.908pt)
+ -- (169.5659pt, -634.908pt)
+ -- (169.1731pt, -635.5103pt)
+ -- (169.1731pt, -635.5103pt)
+ -- (169.8138pt, -635.925pt)
+ -- (169.8138pt, -635.925pt)
+ -- (171.0271pt, -636.642pt) -- cycle
+(173.8707pt, -637.4875pt) -- (172.0136pt, -636.3896pt)
+ -- (172.0136pt, -636.3896pt)
+ -- (171.6468pt, -637.0079pt)
+ -- (171.6468pt, -637.0079pt)
+ -- (173.5039pt, -638.1057pt) -- cycle
+(176.3534pt, -638.9104pt) -- (175.5198pt, -638.4637pt)
+ -- (175.5198pt, -638.4637pt)
+ -- (174.4894pt, -637.8535pt)
+ -- (174.4894pt, -637.8535pt)
+ -- (174.1226pt, -638.4717pt)
+ -- (174.1226pt, -638.4717pt)
+ -- (175.18pt, -639.0959pt)
+ -- (175.18pt, -639.0959pt)
+ -- (176.0126pt, -639.5426pt) -- cycle
+(178.8891pt, -640.2695pt) -- (176.9871pt, -639.2504pt)
+ -- (176.9871pt, -639.2504pt)
+ -- (176.6463pt, -639.8826pt)
+ -- (176.6463pt, -639.8826pt)
+ -- (178.5483pt, -640.9026pt) -- cycle
+(181.4198pt, -641.6046pt) -- (180.987pt, -641.3953pt)
+ -- (180.987pt, -641.3953pt)
+ -- (179.5228pt, -640.6095pt)
+ -- (179.5228pt, -640.6095pt)
+ -- (179.1819pt, -641.2427pt)
+ -- (179.1819pt, -641.2427pt)
+ -- (180.6732pt, -642.0414pt)
+ -- (180.6732pt, -642.0414pt)
+ -- (181.106pt, -642.2508pt) -- cycle
+(184.0105pt, -642.8571pt) -- (182.0675pt, -641.9177pt)
+ -- (182.0675pt, -641.9177pt)
+ -- (181.7536pt, -642.5638pt)
+ -- (181.7536pt, -642.5638pt)
+ -- (183.6966pt, -643.5032pt) -- cycle
+(186.5871pt, -644.1024pt) -- (186.5721pt, -644.0964pt)
+ -- (186.5721pt, -644.0964pt)
+ -- (184.6581pt, -643.1702pt)
+ -- (184.6581pt, -643.1702pt)
+ -- (184.3443pt, -643.8163pt)
+ -- (184.3443pt, -643.8163pt)
+ -- (186.2863pt, -644.7546pt)
+ -- (186.2863pt, -644.7546pt)
+ -- (186.3003pt, -644.7615pt) -- cycle
+(189.2278pt, -645.2471pt) -- (187.2478pt, -644.3886pt)
+ -- (187.2478pt, -644.3886pt)
+ -- (186.9609pt, -645.0477pt)
+ -- (186.9609pt, -645.0477pt)
+ -- (188.9379pt, -645.9053pt) -- cycle
+(191.8664pt, -646.3909pt) -- (189.8875pt, -645.5333pt)
+ -- (189.8875pt, -645.5333pt)
+ -- (189.5976pt, -646.1914pt)
+ -- (189.5976pt, -646.1914pt)
+ -- (191.5766pt, -647.0499pt) -- cycle
+(194.535pt, -647.4296pt) -- (192.5161pt, -646.66pt)
+ -- (192.5161pt, -646.66pt)
+ -- (192.2562pt, -647.3307pt)
+ -- (192.2562pt, -647.3307pt)
+ -- (194.2752pt, -648.1001pt) -- cycle
+(197.2237pt, -648.4553pt) -- (195.2047pt, -647.6859pt)
+ -- (195.2047pt, -647.6859pt)
+ -- (194.9448pt, -648.3566pt)
+ -- (194.9448pt, -648.3566pt)
+ -- (196.9638pt, -649.1259pt) -- cycle
+(199.9223pt, -649.3961pt) -- (198.0532pt, -648.7742pt)
+ -- (198.0532pt, -648.7742pt)
+ -- (197.8933pt, -648.7118pt)
+ -- (197.8933pt, -648.7118pt)
+ -- (197.6335pt, -649.3823pt)
+ -- (197.6335pt, -649.3823pt)
+ -- (197.8333pt, -649.4551pt)
+ -- (197.8333pt, -649.4551pt)
+ -- (199.6924pt, -650.0771pt) -- cycle
+(202.6509pt, -650.3052pt) -- (200.6119pt, -649.6233pt)
+ -- (200.6119pt, -649.6233pt)
+ -- (200.382pt, -650.3044pt)
+ -- (200.382pt, -650.3044pt)
+ -- (202.431pt, -650.9863pt) -- cycle
+(205.3895pt, -651.1422pt) -- (203.9302pt, -650.7286pt)
+ -- (203.9302pt, -650.7286pt)
+ -- (203.3405pt, -650.5325pt)
+ -- (203.3405pt, -650.5325pt)
+ -- (203.1106pt, -651.2136pt)
+ -- (203.1106pt, -651.2136pt)
+ -- (203.7303pt, -651.4193pt)
+ -- (203.7303pt, -651.4193pt)
+ -- (205.1996pt, -651.8331pt) -- cycle
+(208.1581pt, -651.9243pt) -- (206.0791pt, -651.3378pt)
+ -- (206.0791pt, -651.3378pt)
+ -- (205.8892pt, -652.0286pt)
+ -- (205.8892pt, -652.0286pt)
+ -- (207.9681pt, -652.6151pt) -- cycle
+(210.9266pt, -652.6525pt) -- (209.8672pt, -652.407pt)
+ -- (209.8672pt, -652.407pt)
+ -- (208.8577pt, -652.1198pt)
+ -- (208.8577pt, -652.1198pt)
+ -- (208.6578pt, -652.8107pt)
+ -- (208.6578pt, -652.8107pt)
+ -- (209.7072pt, -653.1063pt)
+ -- (209.7072pt, -653.1063pt)
+ -- (210.7667pt, -653.3518pt) -- cycle
+(213.7352pt, -653.303pt) -- (211.6263pt, -652.8151pt)
+ -- (211.6263pt, -652.8151pt)
+ -- (211.4663pt, -653.5144pt)
+ -- (211.4663pt, -653.5144pt)
+ -- (213.5652pt, -654.0023pt) -- cycle
+(216.5237pt, -653.9205pt) -- (215.8841pt, -653.8021pt)
+ -- (215.8841pt, -653.8021pt)
+ -- (214.4348pt, -653.4656pt)
+ -- (214.4348pt, -653.4656pt)
+ -- (214.2649pt, -654.1649pt)
+ -- (214.2649pt, -654.1649pt)
+ -- (215.7441pt, -654.5081pt)
+ -- (215.7441pt, -654.5081pt)
+ -- (216.3938pt, -654.6266pt) -- cycle
+(219.3523pt, -654.4406pt) -- (217.2334pt, -654.0505pt)
+ -- (217.2334pt, -654.0505pt)
+ -- (217.1034pt, -654.7566pt)
+ -- (217.1034pt, -654.7566pt)
+ -- (219.2223pt, -655.1467pt) -- cycle
+(222.1708pt, -654.9455pt) -- (221.921pt, -654.9135pt)
+ -- (221.921pt, -654.9135pt)
+ -- (220.0619pt, -654.5707pt)
+ -- (220.0619pt, -654.5707pt)
+ -- (219.932pt, -655.2767pt)
+ -- (219.932pt, -655.2767pt)
+ -- (221.831pt, -655.6253pt)
+ -- (221.831pt, -655.6253pt)
+ -- (222.0709pt, -655.6573pt) -- cycle
+(225.0194pt, -655.3197pt) -- (222.8805pt, -655.039pt)
+ -- (222.8805pt, -655.039pt)
+ -- (222.7905pt, -655.7509pt)
+ -- (222.7905pt, -655.7509pt)
+ -- (224.9294pt, -656.0316pt) -- cycle
+(227.8779pt, -655.694pt) -- (225.739pt, -655.4133pt)
+ -- (225.739pt, -655.4133pt)
+ -- (225.6391pt, -656.1251pt)
+ -- (225.6391pt, -656.1251pt)
+ -- (227.7879pt, -656.4058pt) -- cycle
+(230.7264pt, -655.9307pt) -- (228.5775pt, -655.7573pt)
+ -- (228.5775pt, -655.7573pt)
+ -- (228.5176pt, -656.473pt)
+ -- (228.5176pt, -656.473pt)
+ -- (230.6665pt, -656.6462pt) -- cycle
+(233.5949pt, -656.1616pt) -- (231.4461pt, -655.9884pt)
+ -- (231.4461pt, -655.9884pt)
+ -- (231.3861pt, -656.704pt)
+ -- (231.3861pt, -656.704pt)
+ -- (233.535pt, -656.8772pt) -- cycle
+(236.4535pt, -656.2668pt) -- (234.2946pt, -656.209pt)
+ -- (234.2946pt, -656.209pt)
+ -- (234.2746pt, -656.9266pt)
+ -- (234.2746pt, -656.9266pt)
+ -- (236.4335pt, -656.9845pt) -- cycle
+(239.332pt, -656.3439pt) -- (237.1731pt, -656.2861pt)
+ -- (237.1731pt, -656.2861pt)
+ -- (237.1531pt, -657.0038pt)
+ -- (237.1531pt, -657.0038pt)
+ -- (239.312pt, -657.0616pt) -- cycle
+(242.2005pt, -656.3521pt) -- (240.2515pt, -656.3688pt)
+ -- (240.2515pt, -656.3688pt)
+ -- (240.0516pt, -656.3632pt)
+ -- (240.0516pt, -656.3632pt)
+ -- (240.0316pt, -657.0809pt)
+ -- (240.0316pt, -657.0809pt)
+ -- (240.2515pt, -657.0867pt)
+ -- (240.2515pt, -657.0867pt)
+ -- (242.2005pt, -657.07pt) -- cycle
+(245.079pt, -656.3275pt) -- (242.9202pt, -656.346pt)
+ -- (242.9202pt, -656.346pt)
+ -- (242.9202pt, -657.0639pt)
+ -- (242.9202pt, -657.0639pt)
+ -- (245.079pt, -657.0455pt) -- cycle
+(247.9576pt, -656.303pt) -- (245.7987pt, -656.3214pt)
+ -- (245.7987pt, -656.3214pt)
+ -- (245.7987pt, -657.0393pt)
+ -- (245.7987pt, -657.0393pt)
+ -- (247.9576pt, -657.0209pt) -- cycle
+(250.8361pt, -656.2784pt) -- (248.6772pt, -656.2969pt)
+ -- (248.6772pt, -656.2969pt)
+ -- (248.6772pt, -657.0148pt)
+ -- (248.6772pt, -657.0148pt)
+ -- (250.8361pt, -656.9963pt) -- cycle
+(253.7046pt, -656.2334pt) -- (252.5152pt, -656.2642pt)
+ -- (252.5152pt, -656.2642pt)
+ -- (251.5557pt, -656.2723pt)
+ -- (251.5557pt, -656.2723pt)
+ -- (251.5557pt, -656.9902pt)
+ -- (251.5557pt, -656.9902pt)
+ -- (252.5352pt, -656.9818pt)
+ -- (252.5352pt, -656.9818pt)
+ -- (253.7246pt, -656.9511pt) -- cycle
+(256.5831pt, -656.1592pt) -- (254.4242pt, -656.2148pt)
+ -- (254.4242pt, -656.2148pt)
+ -- (254.4442pt, -656.9326pt)
+ -- (254.4442pt, -656.9326pt)
+ -- (256.6031pt, -656.8768pt) -- cycle
+(259.4616pt, -656.0848pt) -- (257.3027pt, -656.1406pt)
+ -- (257.3027pt, -656.1406pt)
+ -- (257.3228pt, -656.8583pt)
+ -- (257.3228pt, -656.8583pt)
+ -- (259.4816pt, -656.8026pt) -- cycle
+(262.3401pt, -656.0105pt) -- (260.1813pt, -656.0662pt)
+ -- (260.1813pt, -656.0662pt)
+ -- (260.2012pt, -656.7839pt)
+ -- (260.2012pt, -656.7839pt)
+ -- (262.3502pt, -656.7283pt) -- cycle
+(265.2087pt, -655.928pt) -- (264.6689pt, -655.9503pt)
+ -- (264.6689pt, -655.9503pt)
+ -- (263.0598pt, -655.9919pt)
+ -- (263.0598pt, -655.9919pt)
+ -- (263.0698pt, -656.7097pt)
+ -- (263.0698pt, -656.7097pt)
+ -- (264.7089pt, -656.6675pt)
+ -- (264.7089pt, -656.6675pt)
+ -- (265.2386pt, -656.6453pt) -- cycle
+(268.0872pt, -655.8077pt) -- (265.9283pt, -655.8978pt)
+ -- (265.9283pt, -655.8978pt)
+ -- (265.9583pt, -656.6152pt)
+ -- (265.9583pt, -656.6152pt)
+ -- (268.1172pt, -656.525pt) -- cycle
+(270.9557pt, -655.6874pt) -- (268.8068pt, -655.7777pt)
+ -- (268.8068pt, -655.7777pt)
+ -- (268.8368pt, -656.4949pt)
+ -- (268.8368pt, -656.4949pt)
+ -- (270.9857pt, -656.4048pt) -- cycle
+(273.8342pt, -655.5673pt) -- (271.6754pt, -655.6574pt)
+ -- (271.6754pt, -655.6574pt)
+ -- (271.7053pt, -656.3748pt)
+ -- (271.7053pt, -656.3748pt)
+ -- (273.8642pt, -656.2845pt) -- cycle
+(276.7028pt, -655.4465pt) -- (276.6528pt, -655.4495pt)
+ -- (276.6528pt, -655.4495pt)
+ -- (274.5539pt, -655.5372pt)
+ -- (274.5539pt, -655.5372pt)
+ -- (274.5839pt, -656.2545pt)
+ -- (274.5839pt, -656.2545pt)
+ -- (276.6927pt, -656.1662pt)
+ -- (276.6927pt, -656.1662pt)
+ -- (276.7427pt, -656.1632pt) -- cycle
+(279.5813pt, -655.281pt) -- (277.4224pt, -655.4052pt)
+ -- (277.4224pt, -655.4052pt)
+ -- (277.4624pt, -656.1219pt)
+ -- (277.4624pt, -656.1219pt)
+ -- (279.6213pt, -655.9977pt) -- cycle
+(282.4498pt, -655.1155pt) -- (280.3009pt, -655.2396pt)
+ -- (280.3009pt, -655.2396pt)
+ -- (280.3409pt, -655.9564pt)
+ -- (280.3409pt, -655.9564pt)
+ -- (282.4998pt, -655.8322pt) -- cycle
+(285.3283pt, -654.95pt) -- (283.1694pt, -655.0741pt)
+ -- (283.1694pt, -655.0741pt)
+ -- (283.2094pt, -655.7908pt)
+ -- (283.2094pt, -655.7908pt)
+ -- (285.3683pt, -655.6667pt) -- cycle
+(288.1968pt, -654.7844pt) -- (286.048pt, -654.9086pt)
+ -- (286.048pt, -654.9086pt)
+ -- (286.088pt, -655.6253pt)
+ -- (286.088pt, -655.6253pt)
+ -- (288.2468pt, -655.5012pt) -- cycle
+(291.0654pt, -654.5836pt) -- (288.9165pt, -654.7359pt)
+ -- (288.9165pt, -654.7359pt)
+ -- (288.9665pt, -655.452pt)
+ -- (288.9665pt, -655.452pt)
+ -- (291.1154pt, -655.2997pt) -- cycle
+(293.9439pt, -654.3806pt) -- (291.785pt, -654.5328pt)
+ -- (291.785pt, -654.5328pt)
+ -- (291.835pt, -655.249pt)
+ -- (291.835pt, -655.249pt)
+ -- (293.9939pt, -655.0967pt) -- cycle
+(296.8024pt, -654.1592pt) -- (294.6535pt, -654.326pt)
+ -- (294.6535pt, -654.326pt)
+ -- (294.7135pt, -655.0417pt)
+ -- (294.7135pt, -655.0417pt)
+ -- (296.8624pt, -654.875pt) -- cycle
+(299.671pt, -653.9369pt) -- (299.641pt, -653.9396pt)
+ -- (299.641pt, -653.9396pt)
+ -- (297.5221pt, -654.1037pt)
+ -- (297.5221pt, -654.1037pt)
+ -- (297.582pt, -654.8195pt)
+ -- (297.582pt, -654.8195pt)
+ -- (299.7009pt, -654.6548pt)
+ -- (299.7009pt, -654.6548pt)
+ -- (299.7309pt, -654.6521pt) -- cycle
+(302.5395pt, -653.6864pt) -- (300.3906pt, -653.8743pt)
+ -- (300.3906pt, -653.8743pt)
+ -- (300.4506pt, -654.5895pt)
+ -- (300.4506pt, -654.5895pt)
+ -- (302.5994pt, -654.4017pt) -- cycle
+(305.408pt, -653.4337pt) -- (305.1181pt, -653.4612pt)
+ -- (305.1181pt, -653.4612pt)
+ -- (303.2591pt, -653.6238pt)
+ -- (303.2591pt, -653.6238pt)
+ -- (303.3191pt, -654.3391pt)
+ -- (303.3191pt, -654.3391pt)
+ -- (305.1881pt, -654.1759pt)
+ -- (305.1881pt, -654.1759pt)
+ -- (305.478pt, -654.1484pt) -- cycle
+(308.2665pt, -653.1575pt) -- (306.1176pt, -653.3646pt)
+ -- (306.1176pt, -653.3646pt)
+ -- (306.1876pt, -654.0793pt)
+ -- (306.1876pt, -654.0793pt)
+ -- (308.3365pt, -653.8721pt) -- cycle
+(311.135pt, -652.876pt) -- (310.4654pt, -652.9456pt)
+ -- (310.4654pt, -652.9456pt)
+ -- (308.9861pt, -653.0884pt)
+ -- (308.9861pt, -653.0884pt)
+ -- (309.0561pt, -653.8031pt)
+ -- (309.0561pt, -653.8031pt)
+ -- (310.5453pt, -653.6596pt)
+ -- (310.5453pt, -653.6596pt)
+ -- (311.205pt, -653.59pt) -- cycle
+(313.9936pt, -652.5755pt) -- (311.8447pt, -652.8008pt)
+ -- (311.8447pt, -652.8008pt)
+ -- (311.9246pt, -653.5148pt)
+ -- (311.9246pt, -653.5148pt)
+ -- (314.0735pt, -653.2896pt) -- cycle
+(316.8521pt, -652.2647pt) -- (315.6627pt, -652.4pt)
+ -- (315.6627pt, -652.4pt)
+ -- (314.7132pt, -652.5004pt)
+ -- (314.7132pt, -652.5004pt)
+ -- (314.7831pt, -653.2145pt)
+ -- (314.7831pt, -653.2145pt)
+ -- (315.7527pt, -653.1133pt)
+ -- (315.7527pt, -653.1133pt)
+ -- (316.9321pt, -652.978pt) -- cycle
+(319.7106pt, -651.9382pt) -- (317.5717pt, -652.183pt)
+ -- (317.5717pt, -652.183pt)
+ -- (317.6517pt, -652.8964pt)
+ -- (317.6517pt, -652.8964pt)
+ -- (319.7906pt, -652.6516pt) -- cycle
+(322.5692pt, -651.5912pt) -- (320.7101pt, -651.8247pt)
+ -- (320.7101pt, -651.8247pt)
+ -- (320.4303pt, -651.8567pt)
+ -- (320.4303pt, -651.8567pt)
+ -- (320.5102pt, -652.5699pt)
+ -- (320.5102pt, -652.5699pt)
+ -- (320.8001pt, -652.5369pt)
+ -- (320.8001pt, -652.5369pt)
+ -- (322.6591pt, -652.3035pt) -- cycle
+(325.4177pt, -651.2323pt) -- (323.2788pt, -651.5015pt)
+ -- (323.2788pt, -651.5015pt)
+ -- (323.3688pt, -652.2137pt)
+ -- (323.3688pt, -652.2137pt)
+ -- (325.5077pt, -651.9446pt) -- cycle
+(328.2662pt, -650.8491pt) -- (326.1273pt, -651.1379pt)
+ -- (326.1273pt, -651.1379pt)
+ -- (326.2273pt, -651.8494pt)
+ -- (326.2273pt, -651.8494pt)
+ -- (328.3662pt, -651.5605pt) -- cycle
+(331.1148pt, -650.4542pt) -- (330.2852pt, -650.5768pt)
+ -- (330.2852pt, -650.5768pt)
+ -- (328.9858pt, -650.7527pt)
+ -- (328.9858pt, -650.7527pt)
+ -- (329.0758pt, -651.4642pt)
+ -- (329.0758pt, -651.4642pt)
+ -- (330.3951pt, -651.287pt)
+ -- (330.3951pt, -651.287pt)
+ -- (331.2247pt, -651.1644pt) -- cycle
+(333.9633pt, -650.0336pt) -- (331.8244pt, -650.349pt)
+ -- (331.8244pt, -650.349pt)
+ -- (331.9343pt, -651.0592pt)
+ -- (331.9343pt, -651.0592pt)
+ -- (334.0732pt, -650.7437pt) -- cycle
+(336.8018pt, -649.5895pt) -- (334.7929pt, -649.9119pt)
+ -- (334.7929pt, -649.9119pt)
+ -- (334.6729pt, -649.9283pt)
+ -- (334.6729pt, -649.9283pt)
+ -- (334.7829pt, -650.6385pt)
+ -- (334.7829pt, -650.6385pt)
+ -- (334.9028pt, -650.6207pt)
+ -- (334.9028pt, -650.6207pt)
+ -- (336.9218pt, -650.2984pt) -- cycle
+(339.6404pt, -649.1276pt) -- (339.0907pt, -649.2248pt)
+ -- (339.0907pt, -649.2248pt)
+ -- (337.5115pt, -649.476pt)
+ -- (337.5115pt, -649.476pt)
+ -- (337.6314pt, -650.1848pt)
+ -- (337.6314pt, -650.1848pt)
+ -- (339.2106pt, -649.9318pt)
+ -- (339.2106pt, -649.9318pt)
+ -- (339.7603pt, -649.8347pt) -- cycle
+(342.4789pt, -648.6303pt) -- (340.35pt, -649.0033pt)
+ -- (340.35pt, -649.0033pt)
+ -- (340.47pt, -649.7104pt)
+ -- (340.47pt, -649.7104pt)
+ -- (342.5988pt, -649.3373pt) -- cycle
+(345.2975pt, -648.1042pt) -- (343.1786pt, -648.5068pt)
+ -- (343.1786pt, -648.5068pt)
+ -- (343.3085pt, -649.2121pt)
+ -- (343.3085pt, -649.2121pt)
+ -- (345.4374pt, -648.8094pt) -- cycle
+(348.116pt, -647.5469pt) -- (347.0266pt, -647.7762pt)
+ -- (347.0266pt, -647.7762pt)
+ -- (346.0071pt, -647.97pt)
+ -- (346.0071pt, -647.97pt)
+ -- (346.137pt, -648.6753pt)
+ -- (346.137pt, -648.6753pt)
+ -- (347.1765pt, -648.4788pt)
+ -- (347.1765pt, -648.4788pt)
+ -- (348.2659pt, -648.2494pt) -- cycle
+(350.9246pt, -646.9502pt) -- (350.6447pt, -647.015pt)
+ -- (350.6447pt, -647.015pt)
+ -- (348.8157pt, -647.3986pt)
+ -- (348.8157pt, -647.3986pt)
+ -- (348.9656pt, -648.101pt)
+ -- (348.9656pt, -648.101pt)
+ -- (350.8046pt, -647.7145pt)
+ -- (350.8046pt, -647.7145pt)
+ -- (351.0845pt, -647.6497pt) -- cycle
+(353.7331pt, -646.3081pt) -- (351.6242pt, -646.7897pt)
+ -- (351.6242pt, -646.7897pt)
+ -- (351.7841pt, -647.4893pt)
+ -- (351.7841pt, -647.4893pt)
+ -- (353.893pt, -647.0081pt) -- cycle
+(356.5117pt, -645.6051pt) -- (354.4228pt, -646.1385pt)
+ -- (354.4228pt, -646.1385pt)
+ -- (354.6027pt, -646.8346pt)
+ -- (354.6027pt, -646.8346pt)
+ -- (356.6916pt, -646.3001pt) -- cycle
+(359.2703pt, -644.8344pt) -- (357.2013pt, -645.4266pt)
+ -- (357.2013pt, -645.4266pt)
+ -- (357.4012pt, -646.1166pt)
+ -- (357.4012pt, -646.1166pt)
+ -- (359.4702pt, -645.5253pt) -- cycle
+(362.0089pt, -643.9748pt) -- (359.9499pt, -644.6399pt)
+ -- (359.9499pt, -644.6399pt)
+ -- (360.1798pt, -645.3229pt)
+ -- (360.1798pt, -645.3229pt)
+ -- (362.2288pt, -644.6578pt) -- cycle
+(364.6775pt, -642.9987pt) -- (364.6675pt, -643.0046pt)
+ -- (364.6675pt, -643.0046pt)
+ -- (362.6685pt, -643.7485pt)
+ -- (362.6685pt, -643.7485pt)
+ -- (362.9284pt, -644.4205pt)
+ -- (362.9284pt, -644.4205pt)
+ -- (364.9474pt, -643.6627pt)
+ -- (364.9474pt, -643.6627pt)
+ -- (364.9673pt, -643.6567pt) -- cycle
+(367.2662pt, -641.808pt) -- (366.5665pt, -642.179pt)
+ -- (366.5665pt, -642.179pt)
+ -- (365.3372pt, -642.7125pt)
+ -- (365.3372pt, -642.7125pt)
+ -- (365.627pt, -643.3705pt)
+ -- (365.627pt, -643.3705pt)
+ -- (366.9063pt, -642.8132pt)
+ -- (366.9063pt, -642.8132pt)
+ -- (367.606pt, -642.4423pt) -- cycle
+(369.5949pt, -640.3074pt) -- (369.3651pt, -640.5228pt)
+ -- (369.3651pt, -640.5228pt)
+ -- (369.4151pt, -640.4858pt)
+ -- (369.4151pt, -640.4858pt)
+ -- (368.1357pt, -641.3464pt)
+ -- (368.1357pt, -641.3464pt)
+ -- (367.8958pt, -641.4711pt)
+ -- (367.8958pt, -641.4711pt)
+ -- (368.2357pt, -642.1042pt)
+ -- (368.2357pt, -642.1042pt)
+ -- (368.5355pt, -641.9407pt)
+ -- (368.5355pt, -641.9407pt)
+ -- (369.8148pt, -641.0812pt)
+ -- (369.8148pt, -641.0812pt) .. controls (369.8348pt, -641.0702pt) and (369.8448pt, -641.0582pt) .. (369.8548pt, -641.0453pt)
+ -- (369.8548pt, -641.0453pt)
+ -- (370.0847pt, -640.8299pt) -- cycle
+(370.9343pt, -638.1057pt) -- (370.7444pt, -638.9733pt)
+ -- (370.7444pt, -638.9733pt)
+ -- (370.7943pt, -638.8536pt)
+ -- (370.7943pt, -638.8536pt)
+ -- (370.2346pt, -639.7211pt)
+ -- (370.2346pt, -639.7211pt)
+ -- (370.2846pt, -639.6553pt)
+ -- (370.2846pt, -639.6553pt)
+ -- (370.1147pt, -639.8148pt)
+ -- (370.1147pt, -639.8148pt)
+ -- (370.6144pt, -640.3373pt)
+ -- (370.6144pt, -640.3373pt)
+ -- (370.7843pt, -640.1777pt)
+ -- (370.7843pt, -640.1777pt) .. controls (370.8044pt, -640.1578pt) and (370.8243pt, -640.1349pt) .. (370.8344pt, -640.111pt)
+ -- (370.8344pt, -640.111pt)
+ -- (371.394pt, -639.2435pt)
+ -- (371.394pt, -639.2435pt) .. controls (371.424pt, -639.2075pt) and (371.444pt, -639.1667pt) .. (371.444pt, -639.1248pt)
+ -- (371.444pt, -639.1248pt)
+ -- (371.6339pt, -638.2573pt) -- cycle
+;
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(120.9489,-536.7969){\fontsize{14.04017}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Vertical }
+\put(122.2682,-553.5486){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}retrace}
+\put(101.423,-418.2985){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(109.9386,-414.1106){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}V}
+\put(116.1754,-421.6489){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fp}
+\put(127.9293,-418.2985){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ T}
+\put(148.2229,-414.1106){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}V}
+\put(154.4597,-421.6489){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pw}
+\put(170.2915,-418.2985){\fontsize{14.01621}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ T}
+\put(190.5571,-414.1106){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}V}
+\put(196.7939,-421.6489){\fontsize{9.344137}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bp}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(288.29,-729.536){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}3 }
+\put(39,-742.976){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(79.224,-73.41998){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Symbol Parameter Time \# Clocks }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -62.96002pt) -- (34.08pt, -62.96002pt)
+ -- (34.08pt, -62.96002pt)
+ -- (34.08pt, -62pt)
+ -- (34.08pt, -62pt)
+ -- (33.12pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -62.96002pt) -- (34.08pt, -62.96002pt)
+ -- (34.08pt, -62.96002pt)
+ -- (34.08pt, -62pt)
+ -- (34.08pt, -62pt)
+ -- (33.12pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -62.96002pt) -- (161.9pt, -62.96002pt)
+ -- (161.9pt, -62.96002pt)
+ -- (161.9pt, -62pt)
+ -- (161.9pt, -62pt)
+ -- (34.08pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -62.96002pt) -- (162.86pt, -62.96002pt)
+ -- (162.86pt, -62.96002pt)
+ -- (162.86pt, -62pt)
+ -- (162.86pt, -62pt)
+ -- (161.9pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -62.96002pt) -- (290.56pt, -62.96002pt)
+ -- (290.56pt, -62.96002pt)
+ -- (290.56pt, -62pt)
+ -- (290.56pt, -62pt)
+ -- (162.86pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -62.96002pt) -- (291.53pt, -62.96002pt)
+ -- (291.53pt, -62.96002pt)
+ -- (291.53pt, -62pt)
+ -- (291.53pt, -62pt)
+ -- (290.57pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -62.96002pt) -- (419.35pt, -62.96002pt)
+ -- (419.35pt, -62.96002pt)
+ -- (419.35pt, -62pt)
+ -- (419.35pt, -62pt)
+ -- (291.53pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -62.96002pt) -- (420.31pt, -62.96002pt)
+ -- (420.31pt, -62.96002pt)
+ -- (420.31pt, -62pt)
+ -- (420.31pt, -62pt)
+ -- (419.35pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -62.96002pt) -- (548.01pt, -62.96002pt)
+ -- (548.01pt, -62.96002pt)
+ -- (548.01pt, -62pt)
+ -- (548.01pt, -62pt)
+ -- (420.31pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -62.96002pt) -- (548.98pt, -62.96002pt)
+ -- (548.98pt, -62.96002pt)
+ -- (548.98pt, -62pt)
+ -- (548.98pt, -62pt)
+ -- (548.02pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -62.96002pt) -- (548.98pt, -62.96002pt)
+ -- (548.98pt, -62.96002pt)
+ -- (548.98pt, -62pt)
+ -- (548.98pt, -62pt)
+ -- (548.02pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -75.94pt) -- (34.08pt, -75.94pt)
+ -- (34.08pt, -75.94pt)
+ -- (34.08pt, -62.95599pt)
+ -- (34.08pt, -62.95599pt)
+ -- (33.12pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -75.94pt) -- (162.86pt, -75.94pt)
+ -- (162.86pt, -75.94pt)
+ -- (162.86pt, -62.95599pt)
+ -- (162.86pt, -62.95599pt)
+ -- (161.9pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -75.94pt) -- (291.53pt, -75.94pt)
+ -- (291.53pt, -75.94pt)
+ -- (291.53pt, -62.95599pt)
+ -- (291.53pt, -62.95599pt)
+ -- (290.57pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -75.94pt) -- (420.31pt, -75.94pt)
+ -- (420.31pt, -75.94pt)
+ -- (420.31pt, -62.95599pt)
+ -- (420.31pt, -62.95599pt)
+ -- (419.35pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -75.94pt) -- (548.98pt, -75.94pt)
+ -- (548.98pt, -75.94pt)
+ -- (548.98pt, -62.95599pt)
+ -- (548.98pt, -62.95599pt)
+ -- (548.02pt, -62.95599pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(34.08pt, -91.53998pt) -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -78.21997pt)
+ -- (161.78pt, -78.21997pt)
+ -- (34.08pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -91.53998pt) -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -78.21997pt)
+ -- (161.78pt, -78.21997pt)
+ -- (34.08pt, -78.21997pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(39pt, -91.06pt) -- (156.86pt, -91.06pt)
+ -- (156.86pt, -91.06pt)
+ -- (156.86pt, -78.21997pt)
+ -- (156.86pt, -78.21997pt)
+ -- (39pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -91.53998pt) -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -91.53998pt)
+ -- (161.78pt, -78.21997pt)
+ -- (161.78pt, -78.21997pt)
+ -- (34.08pt, -78.21997pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(92.9,-88.65997){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(99.5,-89.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}S}
+\put(102.86,-88.65997){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(162.86pt, -91.53998pt) -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -78.21997pt)
+ -- (290.56pt, -78.21997pt)
+ -- (162.86pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -91.53998pt) -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -78.21997pt)
+ -- (290.56pt, -78.21997pt)
+ -- (162.86pt, -78.21997pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(167.66pt, -91.53998pt) -- (285.64pt, -91.53998pt)
+ -- (285.64pt, -91.53998pt)
+ -- (285.64pt, -78.21997pt)
+ -- (285.64pt, -78.21997pt)
+ -- (167.66pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -91.53998pt) -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -78.21997pt)
+ -- (290.56pt, -78.21997pt)
+ -- (162.86pt, -78.21997pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(179.3,-88.53998){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Synchronization time }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(291.53pt, -91.53998pt) -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -78.21997pt)
+ -- (419.23pt, -78.21997pt)
+ -- (291.53pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -91.53998pt) -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -78.21997pt)
+ -- (419.23pt, -78.21997pt)
+ -- (291.53pt, -78.21997pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(296.45pt, -91.53998pt) -- (414.31pt, -91.53998pt)
+ -- (414.31pt, -91.53998pt)
+ -- (414.31pt, -78.21997pt)
+ -- (414.31pt, -78.21997pt)
+ -- (296.45pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -91.53998pt) -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -91.53998pt)
+ -- (419.23pt, -78.21997pt)
+ -- (419.23pt, -78.21997pt)
+ -- (291.53pt, -78.21997pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(343.51,-88.53998){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}32 us }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(420.31pt, -91.53998pt) -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -78.21997pt)
+ -- (548.01pt, -78.21997pt)
+ -- (420.31pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -91.53998pt) -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -78.21997pt)
+ -- (548.01pt, -78.21997pt)
+ -- (420.31pt, -78.21997pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(425.11pt, -91.53998pt) -- (543.09pt, -91.53998pt)
+ -- (543.09pt, -91.53998pt)
+ -- (543.09pt, -78.21997pt)
+ -- (543.09pt, -78.21997pt)
+ -- (425.11pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -91.53998pt) -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -78.21997pt)
+ -- (548.01pt, -78.21997pt)
+ -- (420.31pt, -78.21997pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(484.06,-88.53998){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -78.21997pt) -- (34.08pt, -78.21997pt)
+ -- (34.08pt, -78.21997pt)
+ -- (34.08pt, -75.93994pt)
+ -- (34.08pt, -75.93994pt)
+ -- (33.12pt, -75.93994pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -78.09998pt) -- (161.9pt, -78.09998pt)
+ -- (161.9pt, -78.09998pt)
+ -- (161.9pt, -75.94pt)
+ -- (161.9pt, -75.94pt)
+ -- (34.08pt, -75.94pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(34.08pt, -78.21997pt) -- (161.9pt, -78.21997pt)
+ -- (161.9pt, -78.21997pt)
+ -- (161.9pt, -78.09998pt)
+ -- (161.9pt, -78.09998pt)
+ -- (34.08pt, -78.09998pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(162.86pt, -78.21997pt) -- (164.06pt, -78.21997pt)
+ -- (164.06pt, -78.21997pt)
+ -- (164.06pt, -78.09998pt)
+ -- (164.06pt, -78.09998pt)
+ -- (162.86pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -78.21997pt) -- (162.86pt, -78.21997pt)
+ -- (162.86pt, -78.21997pt)
+ -- (162.86pt, -78.09998pt)
+ -- (162.86pt, -78.09998pt)
+ -- (161.9pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -78.09998pt) -- (164.06pt, -78.09998pt)
+ -- (164.06pt, -78.09998pt)
+ -- (164.06pt, -75.94pt)
+ -- (164.06pt, -75.94pt)
+ -- (161.9pt, -75.94pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(164.06pt, -78.09998pt) -- (290.56pt, -78.09998pt)
+ -- (290.56pt, -78.09998pt)
+ -- (290.56pt, -75.94pt)
+ -- (290.56pt, -75.94pt)
+ -- (164.06pt, -75.94pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(164.06pt, -78.21997pt) -- (290.56pt, -78.21997pt)
+ -- (290.56pt, -78.21997pt)
+ -- (290.56pt, -78.09998pt)
+ -- (290.56pt, -78.09998pt)
+ -- (164.06pt, -78.09998pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(291.53pt, -78.21997pt) -- (292.73pt, -78.21997pt)
+ -- (292.73pt, -78.21997pt)
+ -- (292.73pt, -78.09998pt)
+ -- (292.73pt, -78.09998pt)
+ -- (291.53pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -78.21997pt) -- (291.53pt, -78.21997pt)
+ -- (291.53pt, -78.21997pt)
+ -- (291.53pt, -78.09998pt)
+ -- (291.53pt, -78.09998pt)
+ -- (290.57pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -78.09998pt) -- (292.73pt, -78.09998pt)
+ -- (292.73pt, -78.09998pt)
+ -- (292.73pt, -75.94pt)
+ -- (292.73pt, -75.94pt)
+ -- (290.57pt, -75.94pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(292.73pt, -78.09998pt) -- (419.35pt, -78.09998pt)
+ -- (419.35pt, -78.09998pt)
+ -- (419.35pt, -75.94pt)
+ -- (419.35pt, -75.94pt)
+ -- (292.73pt, -75.94pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(292.73pt, -78.21997pt) -- (419.35pt, -78.21997pt)
+ -- (419.35pt, -78.21997pt)
+ -- (419.35pt, -78.09998pt)
+ -- (419.35pt, -78.09998pt)
+ -- (292.73pt, -78.09998pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(420.31pt, -78.21997pt) -- (421.51pt, -78.21997pt)
+ -- (421.51pt, -78.21997pt)
+ -- (421.51pt, -78.09998pt)
+ -- (421.51pt, -78.09998pt)
+ -- (420.31pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -78.21997pt) -- (420.31pt, -78.21997pt)
+ -- (420.31pt, -78.21997pt)
+ -- (420.31pt, -78.09998pt)
+ -- (420.31pt, -78.09998pt)
+ -- (419.35pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -78.09998pt) -- (421.51pt, -78.09998pt)
+ -- (421.51pt, -78.09998pt)
+ -- (421.51pt, -75.94pt)
+ -- (421.51pt, -75.94pt)
+ -- (419.35pt, -75.94pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(421.51pt, -78.09998pt) -- (548.01pt, -78.09998pt)
+ -- (548.01pt, -78.09998pt)
+ -- (548.01pt, -75.94pt)
+ -- (548.01pt, -75.94pt)
+ -- (421.51pt, -75.94pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(421.51pt, -78.21997pt) -- (548.01pt, -78.21997pt)
+ -- (548.01pt, -78.21997pt)
+ -- (548.01pt, -78.09998pt)
+ -- (548.01pt, -78.09998pt)
+ -- (421.51pt, -78.09998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -78.21997pt) -- (548.98pt, -78.21997pt)
+ -- (548.98pt, -78.21997pt)
+ -- (548.98pt, -75.93994pt)
+ -- (548.98pt, -75.93994pt)
+ -- (548.02pt, -75.93994pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -91.53998pt) -- (34.08pt, -91.53998pt)
+ -- (34.08pt, -91.53998pt)
+ -- (34.08pt, -78.21997pt)
+ -- (34.08pt, -78.21997pt)
+ -- (33.12pt, -78.21997pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -91.53998pt) -- (162.86pt, -91.53998pt)
+ -- (162.86pt, -91.53998pt)
+ -- (162.86pt, -78.21997pt)
+ -- (162.86pt, -78.21997pt)
+ -- (161.9pt, -78.21997pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -91.53998pt) -- (291.53pt, -91.53998pt)
+ -- (291.53pt, -91.53998pt)
+ -- (291.53pt, -78.21997pt)
+ -- (291.53pt, -78.21997pt)
+ -- (290.57pt, -78.21997pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -91.53998pt) -- (420.31pt, -91.53998pt)
+ -- (420.31pt, -91.53998pt)
+ -- (420.31pt, -78.21997pt)
+ -- (420.31pt, -78.21997pt)
+ -- (419.35pt, -78.21997pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -91.53998pt) -- (548.98pt, -91.53998pt)
+ -- (548.98pt, -91.53998pt)
+ -- (548.98pt, -78.21997pt)
+ -- (548.98pt, -78.21997pt)
+ -- (548.02pt, -78.21997pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -106.06pt) -- (161.78pt, -106.06pt)
+ -- (161.78pt, -106.06pt)
+ -- (161.78pt, -92.62pt)
+ -- (161.78pt, -92.62pt)
+ -- (34.08pt, -92.62pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -106.06pt) -- (161.78pt, -106.06pt)
+ -- (161.78pt, -106.06pt)
+ -- (161.78pt, -92.62pt)
+ -- (161.78pt, -92.62pt)
+ -- (34.08pt, -92.62pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(91.7,-103.06){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(98.3,-104.02){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fp}
+\put(104.18,-103.06){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(200.33,-102.94){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Front porch 640 ns }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(420.31pt, -106.06pt) -- (548.01pt, -106.06pt)
+ -- (548.01pt, -106.06pt)
+ -- (548.01pt, -92.62pt)
+ -- (548.01pt, -92.62pt)
+ -- (420.31pt, -92.62pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -106.06pt) -- (548.01pt, -106.06pt)
+ -- (548.01pt, -106.06pt)
+ -- (548.01pt, -92.62pt)
+ -- (548.01pt, -92.62pt)
+ -- (420.31pt, -92.62pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(425.11pt, -106.06pt) -- (543.09pt, -106.06pt)
+ -- (543.09pt, -106.06pt)
+ -- (543.09pt, -92.62pt)
+ -- (543.09pt, -92.62pt)
+ -- (425.11pt, -92.62pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -106.06pt) -- (548.01pt, -106.06pt)
+ -- (548.01pt, -106.06pt)
+ -- (548.01pt, -92.62pt)
+ -- (548.01pt, -92.62pt)
+ -- (420.31pt, -92.62pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(484.06,-102.94){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -92.5pt) -- (34.08pt, -92.5pt)
+ -- (34.08pt, -92.5pt)
+ -- (34.08pt, -91.53998pt)
+ -- (34.08pt, -91.53998pt)
+ -- (33.12pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -92.5pt) -- (161.9pt, -92.5pt)
+ -- (161.9pt, -92.5pt)
+ -- (161.9pt, -91.53998pt)
+ -- (161.9pt, -91.53998pt)
+ -- (34.08pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -92.5pt) -- (162.86pt, -92.5pt)
+ -- (162.86pt, -92.5pt)
+ -- (162.86pt, -91.53998pt)
+ -- (162.86pt, -91.53998pt)
+ -- (161.9pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -92.5pt) -- (290.56pt, -92.5pt)
+ -- (290.56pt, -92.5pt)
+ -- (290.56pt, -91.53998pt)
+ -- (290.56pt, -91.53998pt)
+ -- (162.86pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -92.5pt) -- (291.53pt, -92.5pt)
+ -- (291.53pt, -92.5pt)
+ -- (291.53pt, -91.53998pt)
+ -- (291.53pt, -91.53998pt)
+ -- (290.57pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -92.5pt) -- (419.35pt, -92.5pt)
+ -- (419.35pt, -92.5pt)
+ -- (419.35pt, -91.53998pt)
+ -- (419.35pt, -91.53998pt)
+ -- (291.53pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -92.5pt) -- (420.31pt, -92.5pt)
+ -- (420.31pt, -92.5pt)
+ -- (420.31pt, -91.53998pt)
+ -- (420.31pt, -91.53998pt)
+ -- (419.35pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -92.5pt) -- (548.01pt, -92.5pt)
+ -- (548.01pt, -92.5pt)
+ -- (548.01pt, -91.53998pt)
+ -- (548.01pt, -91.53998pt)
+ -- (420.31pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -92.5pt) -- (548.98pt, -92.5pt)
+ -- (548.98pt, -92.5pt)
+ -- (548.98pt, -91.53998pt)
+ -- (548.98pt, -91.53998pt)
+ -- (548.02pt, -91.53998pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -106.06pt) -- (34.08pt, -106.06pt)
+ -- (34.08pt, -106.06pt)
+ -- (34.08pt, -92.5pt)
+ -- (34.08pt, -92.5pt)
+ -- (33.12pt, -92.5pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -106.06pt) -- (162.86pt, -106.06pt)
+ -- (162.86pt, -106.06pt)
+ -- (162.86pt, -92.5pt)
+ -- (162.86pt, -92.5pt)
+ -- (161.9pt, -92.5pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -106.06pt) -- (291.53pt, -106.06pt)
+ -- (291.53pt, -106.06pt)
+ -- (291.53pt, -92.5pt)
+ -- (291.53pt, -92.5pt)
+ -- (290.57pt, -92.5pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -106.06pt) -- (420.31pt, -106.06pt)
+ -- (420.31pt, -106.06pt)
+ -- (420.31pt, -92.5pt)
+ -- (420.31pt, -92.5pt)
+ -- (419.35pt, -92.5pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -106.06pt) -- (548.98pt, -106.06pt)
+ -- (548.98pt, -106.06pt)
+ -- (548.98pt, -92.5pt)
+ -- (548.98pt, -92.5pt)
+ -- (548.02pt, -92.5pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(34.08pt, -120.46pt) -- (161.78pt, -120.46pt)
+ -- (161.78pt, -120.46pt)
+ -- (161.78pt, -107.02pt)
+ -- (161.78pt, -107.02pt)
+ -- (34.08pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -120.46pt) -- (161.78pt, -120.46pt)
+ -- (161.78pt, -120.46pt)
+ -- (161.78pt, -107.02pt)
+ -- (161.78pt, -107.02pt)
+ -- (34.08pt, -107.02pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(39pt, -119.86pt) -- (156.86pt, -119.86pt)
+ -- (156.86pt, -119.86pt)
+ -- (156.86pt, -107.02pt)
+ -- (156.86pt, -107.02pt)
+ -- (39pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -120.46pt) -- (161.78pt, -120.46pt)
+ -- (161.78pt, -120.46pt)
+ -- (161.78pt, -107.02pt)
+ -- (161.78pt, -107.02pt)
+ -- (34.08pt, -107.02pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(90.02,-117.46){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(96.62,-118.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pw}
+\put(105.86,-117.46){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(162.86pt, -120.46pt) -- (290.56pt, -120.46pt)
+ -- (290.56pt, -120.46pt)
+ -- (290.56pt, -107.02pt)
+ -- (290.56pt, -107.02pt)
+ -- (162.86pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -120.46pt) -- (290.56pt, -120.46pt)
+ -- (290.56pt, -120.46pt)
+ -- (290.56pt, -107.02pt)
+ -- (290.56pt, -107.02pt)
+ -- (162.86pt, -107.02pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(167.66pt, -120.46pt) -- (285.64pt, -120.46pt)
+ -- (285.64pt, -120.46pt)
+ -- (285.64pt, -107.02pt)
+ -- (285.64pt, -107.02pt)
+ -- (167.66pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -120.46pt) -- (290.56pt, -120.46pt)
+ -- (290.56pt, -120.46pt)
+ -- (290.56pt, -107.02pt)
+ -- (290.56pt, -107.02pt)
+ -- (162.86pt, -107.02pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(189.17,-117.34){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sync pulse width }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(291.53pt, -120.46pt) -- (419.23pt, -120.46pt)
+ -- (419.23pt, -120.46pt)
+ -- (419.23pt, -107.02pt)
+ -- (419.23pt, -107.02pt)
+ -- (291.53pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -120.46pt) -- (419.23pt, -120.46pt)
+ -- (419.23pt, -120.46pt)
+ -- (419.23pt, -107.02pt)
+ -- (419.23pt, -107.02pt)
+ -- (291.53pt, -107.02pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(296.45pt, -120.46pt) -- (414.31pt, -120.46pt)
+ -- (414.31pt, -120.46pt)
+ -- (414.31pt, -107.02pt)
+ -- (414.31pt, -107.02pt)
+ -- (296.45pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -120.46pt) -- (419.23pt, -120.46pt)
+ -- (419.23pt, -120.46pt)
+ -- (419.23pt, -107.02pt)
+ -- (419.23pt, -107.02pt)
+ -- (291.53pt, -107.02pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(339.31,-117.34){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}3.84 us }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(420.31pt, -120.46pt) -- (548.01pt, -120.46pt)
+ -- (548.01pt, -120.46pt)
+ -- (548.01pt, -107.02pt)
+ -- (548.01pt, -107.02pt)
+ -- (420.31pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -120.46pt) -- (548.01pt, -120.46pt)
+ -- (548.01pt, -120.46pt)
+ -- (548.01pt, -107.02pt)
+ -- (548.01pt, -107.02pt)
+ -- (420.31pt, -107.02pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(425.11pt, -120.46pt) -- (543.09pt, -120.46pt)
+ -- (543.09pt, -120.46pt)
+ -- (543.09pt, -107.02pt)
+ -- (543.09pt, -107.02pt)
+ -- (425.11pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -120.46pt) -- (548.01pt, -120.46pt)
+ -- (548.01pt, -120.46pt)
+ -- (548.01pt, -107.02pt)
+ -- (548.01pt, -107.02pt)
+ -- (420.31pt, -107.02pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(484.06,-117.34){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -107.02pt) -- (34.08pt, -107.02pt)
+ -- (34.08pt, -107.02pt)
+ -- (34.08pt, -106.06pt)
+ -- (34.08pt, -106.06pt)
+ -- (33.12pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -107.02pt) -- (161.9pt, -107.02pt)
+ -- (161.9pt, -107.02pt)
+ -- (161.9pt, -106.06pt)
+ -- (161.9pt, -106.06pt)
+ -- (34.08pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -107.02pt) -- (162.86pt, -107.02pt)
+ -- (162.86pt, -107.02pt)
+ -- (162.86pt, -106.06pt)
+ -- (162.86pt, -106.06pt)
+ -- (161.9pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -107.02pt) -- (290.56pt, -107.02pt)
+ -- (290.56pt, -107.02pt)
+ -- (290.56pt, -106.06pt)
+ -- (290.56pt, -106.06pt)
+ -- (162.86pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -107.02pt) -- (291.53pt, -107.02pt)
+ -- (291.53pt, -107.02pt)
+ -- (291.53pt, -106.06pt)
+ -- (291.53pt, -106.06pt)
+ -- (290.57pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -107.02pt) -- (419.35pt, -107.02pt)
+ -- (419.35pt, -107.02pt)
+ -- (419.35pt, -106.06pt)
+ -- (419.35pt, -106.06pt)
+ -- (291.53pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -107.02pt) -- (420.31pt, -107.02pt)
+ -- (420.31pt, -107.02pt)
+ -- (420.31pt, -106.06pt)
+ -- (420.31pt, -106.06pt)
+ -- (419.35pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -107.02pt) -- (548.01pt, -107.02pt)
+ -- (548.01pt, -107.02pt)
+ -- (548.01pt, -106.06pt)
+ -- (548.01pt, -106.06pt)
+ -- (420.31pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -107.02pt) -- (548.98pt, -107.02pt)
+ -- (548.98pt, -107.02pt)
+ -- (548.98pt, -106.06pt)
+ -- (548.98pt, -106.06pt)
+ -- (548.02pt, -106.06pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -120.46pt) -- (34.08pt, -120.46pt)
+ -- (34.08pt, -120.46pt)
+ -- (34.08pt, -107.02pt)
+ -- (34.08pt, -107.02pt)
+ -- (33.12pt, -107.02pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -120.46pt) -- (162.86pt, -120.46pt)
+ -- (162.86pt, -120.46pt)
+ -- (162.86pt, -107.02pt)
+ -- (162.86pt, -107.02pt)
+ -- (161.9pt, -107.02pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -120.46pt) -- (291.53pt, -120.46pt)
+ -- (291.53pt, -120.46pt)
+ -- (291.53pt, -107.02pt)
+ -- (291.53pt, -107.02pt)
+ -- (290.57pt, -107.02pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -120.46pt) -- (420.31pt, -120.46pt)
+ -- (420.31pt, -120.46pt)
+ -- (420.31pt, -107.02pt)
+ -- (420.31pt, -107.02pt)
+ -- (419.35pt, -107.02pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -120.46pt) -- (548.98pt, -120.46pt)
+ -- (548.98pt, -120.46pt)
+ -- (548.98pt, -107.02pt)
+ -- (548.98pt, -107.02pt)
+ -- (548.02pt, -107.02pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -134.86pt) -- (161.78pt, -134.86pt)
+ -- (161.78pt, -134.86pt)
+ -- (161.78pt, -121.42pt)
+ -- (161.78pt, -121.42pt)
+ -- (34.08pt, -121.42pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -134.86pt) -- (161.78pt, -134.86pt)
+ -- (161.78pt, -134.86pt)
+ -- (161.78pt, -121.42pt)
+ -- (161.78pt, -121.42pt)
+ -- (34.08pt, -121.42pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(90.74,-131.86){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(97.34,-132.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bp}
+\put(105.02,-131.86){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(202.01,-131.74){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Back porch 1.92 us }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(420.31pt, -134.86pt) -- (548.01pt, -134.86pt)
+ -- (548.01pt, -134.86pt)
+ -- (548.01pt, -121.42pt)
+ -- (548.01pt, -121.42pt)
+ -- (420.31pt, -121.42pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -134.86pt) -- (548.01pt, -134.86pt)
+ -- (548.01pt, -134.86pt)
+ -- (548.01pt, -121.42pt)
+ -- (548.01pt, -121.42pt)
+ -- (420.31pt, -121.42pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(425.11pt, -134.86pt) -- (543.09pt, -134.86pt)
+ -- (543.09pt, -134.86pt)
+ -- (543.09pt, -121.42pt)
+ -- (543.09pt, -121.42pt)
+ -- (425.11pt, -121.42pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -134.86pt) -- (548.01pt, -134.86pt)
+ -- (548.01pt, -134.86pt)
+ -- (548.01pt, -121.42pt)
+ -- (548.01pt, -121.42pt)
+ -- (420.31pt, -121.42pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(484.06,-131.74){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -121.42pt) -- (34.08pt, -121.42pt)
+ -- (34.08pt, -121.42pt)
+ -- (34.08pt, -120.46pt)
+ -- (34.08pt, -120.46pt)
+ -- (33.12pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -121.42pt) -- (161.9pt, -121.42pt)
+ -- (161.9pt, -121.42pt)
+ -- (161.9pt, -120.46pt)
+ -- (161.9pt, -120.46pt)
+ -- (34.08pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -121.42pt) -- (162.86pt, -121.42pt)
+ -- (162.86pt, -121.42pt)
+ -- (162.86pt, -120.46pt)
+ -- (162.86pt, -120.46pt)
+ -- (161.9pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -121.42pt) -- (290.56pt, -121.42pt)
+ -- (290.56pt, -121.42pt)
+ -- (290.56pt, -120.46pt)
+ -- (290.56pt, -120.46pt)
+ -- (162.86pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -121.42pt) -- (291.53pt, -121.42pt)
+ -- (291.53pt, -121.42pt)
+ -- (291.53pt, -120.46pt)
+ -- (291.53pt, -120.46pt)
+ -- (290.57pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -121.42pt) -- (419.35pt, -121.42pt)
+ -- (419.35pt, -121.42pt)
+ -- (419.35pt, -120.46pt)
+ -- (419.35pt, -120.46pt)
+ -- (291.53pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -121.42pt) -- (420.31pt, -121.42pt)
+ -- (420.31pt, -121.42pt)
+ -- (420.31pt, -120.46pt)
+ -- (420.31pt, -120.46pt)
+ -- (419.35pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -121.42pt) -- (548.01pt, -121.42pt)
+ -- (548.01pt, -121.42pt)
+ -- (548.01pt, -120.46pt)
+ -- (548.01pt, -120.46pt)
+ -- (420.31pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -121.42pt) -- (548.98pt, -121.42pt)
+ -- (548.98pt, -121.42pt)
+ -- (548.98pt, -120.46pt)
+ -- (548.98pt, -120.46pt)
+ -- (548.02pt, -120.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -134.86pt) -- (34.08pt, -134.86pt)
+ -- (34.08pt, -134.86pt)
+ -- (34.08pt, -121.42pt)
+ -- (34.08pt, -121.42pt)
+ -- (33.12pt, -121.42pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -134.86pt) -- (162.86pt, -134.86pt)
+ -- (162.86pt, -134.86pt)
+ -- (162.86pt, -121.42pt)
+ -- (162.86pt, -121.42pt)
+ -- (161.9pt, -121.42pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -134.86pt) -- (291.53pt, -134.86pt)
+ -- (291.53pt, -134.86pt)
+ -- (291.53pt, -121.42pt)
+ -- (291.53pt, -121.42pt)
+ -- (290.57pt, -121.42pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -134.86pt) -- (420.31pt, -134.86pt)
+ -- (420.31pt, -134.86pt)
+ -- (420.31pt, -121.42pt)
+ -- (420.31pt, -121.42pt)
+ -- (419.35pt, -121.42pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -134.86pt) -- (548.98pt, -134.86pt)
+ -- (548.98pt, -134.86pt)
+ -- (548.98pt, -121.42pt)
+ -- (548.98pt, -121.42pt)
+ -- (548.02pt, -121.42pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(34.08pt, -149.26pt) -- (161.78pt, -149.26pt)
+ -- (161.78pt, -149.26pt)
+ -- (161.78pt, -135.82pt)
+ -- (161.78pt, -135.82pt)
+ -- (34.08pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -149.26pt) -- (161.78pt, -149.26pt)
+ -- (161.78pt, -149.26pt)
+ -- (161.78pt, -135.82pt)
+ -- (161.78pt, -135.82pt)
+ -- (34.08pt, -135.82pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(39pt, -148.78pt) -- (156.86pt, -148.78pt)
+ -- (156.86pt, -148.78pt)
+ -- (156.86pt, -135.82pt)
+ -- (156.86pt, -135.82pt)
+ -- (39pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(34.08pt, -149.26pt) -- (161.78pt, -149.26pt)
+ -- (161.78pt, -149.26pt)
+ -- (161.78pt, -135.82pt)
+ -- (161.78pt, -135.82pt)
+ -- (34.08pt, -135.82pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(88.34,-146.26){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T}
+\put(94.94,-147.22){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}disp}
+\put(107.54,-146.26){\fontsize{11.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(162.86pt, -149.26pt) -- (290.56pt, -149.26pt)
+ -- (290.56pt, -149.26pt)
+ -- (290.56pt, -135.82pt)
+ -- (290.56pt, -135.82pt)
+ -- (162.86pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -149.26pt) -- (290.56pt, -149.26pt)
+ -- (290.56pt, -149.26pt)
+ -- (290.56pt, -135.82pt)
+ -- (290.56pt, -135.82pt)
+ -- (162.86pt, -135.82pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(167.66pt, -149.26pt) -- (285.64pt, -149.26pt)
+ -- (285.64pt, -149.26pt)
+ -- (285.64pt, -135.82pt)
+ -- (285.64pt, -135.82pt)
+ -- (167.66pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(162.86pt, -149.26pt) -- (290.56pt, -149.26pt)
+ -- (290.56pt, -149.26pt)
+ -- (290.56pt, -135.82pt)
+ -- (290.56pt, -135.82pt)
+ -- (162.86pt, -135.82pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(199.01,-146.14){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Display time }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_220447][even odd rule]
+(291.53pt, -149.26pt) -- (419.23pt, -149.26pt)
+ -- (419.23pt, -149.26pt)
+ -- (419.23pt, -135.82pt)
+ -- (419.23pt, -135.82pt)
+ -- (291.53pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -149.26pt) -- (419.23pt, -149.26pt)
+ -- (419.23pt, -149.26pt)
+ -- (419.23pt, -135.82pt)
+ -- (419.23pt, -135.82pt)
+ -- (291.53pt, -135.82pt) -- cycle
+;
+\filldraw[color_220447][even odd rule]
+(296.45pt, -149.26pt) -- (414.31pt, -149.26pt)
+ -- (414.31pt, -149.26pt)
+ -- (414.31pt, -135.82pt)
+ -- (414.31pt, -135.82pt)
+ -- (296.45pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(291.53pt, -149.26pt) -- (419.23pt, -149.26pt)
+ -- (419.23pt, -149.26pt)
+ -- (419.23pt, -135.82pt)
+ -- (419.23pt, -135.82pt)
+ -- (291.53pt, -135.82pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(339.31,-146.14){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}25.6 us }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(420.31pt, -149.26pt) -- (548.01pt, -149.26pt)
+ -- (548.01pt, -149.26pt)
+ -- (548.01pt, -135.82pt)
+ -- (548.01pt, -135.82pt)
+ -- (420.31pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -149.26pt) -- (548.01pt, -149.26pt)
+ -- (548.01pt, -149.26pt)
+ -- (548.01pt, -135.82pt)
+ -- (548.01pt, -135.82pt)
+ -- (420.31pt, -135.82pt) -- cycle
+;
+\filldraw[color_282751][even odd rule]
+(425.11pt, -149.26pt) -- (543.09pt, -149.26pt)
+ -- (543.09pt, -149.26pt)
+ -- (543.09pt, -135.82pt)
+ -- (543.09pt, -135.82pt)
+ -- (425.11pt, -135.82pt) -- cycle
+;
+\begin{scope}
+\clip
+(420.31pt, -149.26pt) -- (548.01pt, -149.26pt)
+ -- (548.01pt, -149.26pt)
+ -- (548.01pt, -135.82pt)
+ -- (548.01pt, -135.82pt)
+ -- (420.31pt, -135.82pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(484.06,-146.14){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(33.12pt, -135.82pt) -- (34.08pt, -135.82pt)
+ -- (34.08pt, -135.82pt)
+ -- (34.08pt, -134.86pt)
+ -- (34.08pt, -134.86pt)
+ -- (33.12pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -135.82pt) -- (161.9pt, -135.82pt)
+ -- (161.9pt, -135.82pt)
+ -- (161.9pt, -134.86pt)
+ -- (161.9pt, -134.86pt)
+ -- (34.08pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -135.82pt) -- (162.86pt, -135.82pt)
+ -- (162.86pt, -135.82pt)
+ -- (162.86pt, -134.86pt)
+ -- (162.86pt, -134.86pt)
+ -- (161.9pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -135.82pt) -- (290.56pt, -135.82pt)
+ -- (290.56pt, -135.82pt)
+ -- (290.56pt, -134.86pt)
+ -- (290.56pt, -134.86pt)
+ -- (162.86pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -135.82pt) -- (291.53pt, -135.82pt)
+ -- (291.53pt, -135.82pt)
+ -- (291.53pt, -134.86pt)
+ -- (291.53pt, -134.86pt)
+ -- (290.57pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -135.82pt) -- (419.35pt, -135.82pt)
+ -- (419.35pt, -135.82pt)
+ -- (419.35pt, -134.86pt)
+ -- (419.35pt, -134.86pt)
+ -- (291.53pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -135.82pt) -- (420.31pt, -135.82pt)
+ -- (420.31pt, -135.82pt)
+ -- (420.31pt, -134.86pt)
+ -- (420.31pt, -134.86pt)
+ -- (419.35pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -135.82pt) -- (548.01pt, -135.82pt)
+ -- (548.01pt, -135.82pt)
+ -- (548.01pt, -134.86pt)
+ -- (548.01pt, -134.86pt)
+ -- (420.31pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -135.82pt) -- (548.98pt, -135.82pt)
+ -- (548.98pt, -135.82pt)
+ -- (548.98pt, -134.86pt)
+ -- (548.98pt, -134.86pt)
+ -- (548.02pt, -134.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -149.38pt) -- (34.08pt, -149.38pt)
+ -- (34.08pt, -149.38pt)
+ -- (34.08pt, -135.82pt)
+ -- (34.08pt, -135.82pt)
+ -- (33.12pt, -135.82pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -150.34pt) -- (34.08pt, -150.34pt)
+ -- (34.08pt, -150.34pt)
+ -- (34.08pt, -149.3801pt)
+ -- (34.08pt, -149.3801pt)
+ -- (33.12pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(33.12pt, -150.34pt) -- (34.08pt, -150.34pt)
+ -- (34.08pt, -150.34pt)
+ -- (34.08pt, -149.3801pt)
+ -- (34.08pt, -149.3801pt)
+ -- (33.12pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(34.08pt, -150.34pt) -- (161.9pt, -150.34pt)
+ -- (161.9pt, -150.34pt)
+ -- (161.9pt, -149.3801pt)
+ -- (161.9pt, -149.3801pt)
+ -- (34.08pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -149.38pt) -- (162.86pt, -149.38pt)
+ -- (162.86pt, -149.38pt)
+ -- (162.86pt, -135.82pt)
+ -- (162.86pt, -135.82pt)
+ -- (161.9pt, -135.82pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(161.9pt, -150.34pt) -- (162.86pt, -150.34pt)
+ -- (162.86pt, -150.34pt)
+ -- (162.86pt, -149.3801pt)
+ -- (162.86pt, -149.3801pt)
+ -- (161.9pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(162.86pt, -150.34pt) -- (290.56pt, -150.34pt)
+ -- (290.56pt, -150.34pt)
+ -- (290.56pt, -149.3801pt)
+ -- (290.56pt, -149.3801pt)
+ -- (162.86pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -149.38pt) -- (291.53pt, -149.38pt)
+ -- (291.53pt, -149.38pt)
+ -- (291.53pt, -135.82pt)
+ -- (291.53pt, -135.82pt)
+ -- (290.57pt, -135.82pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(290.57pt, -150.34pt) -- (291.53pt, -150.34pt)
+ -- (291.53pt, -150.34pt)
+ -- (291.53pt, -149.3801pt)
+ -- (291.53pt, -149.3801pt)
+ -- (290.57pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(291.53pt, -150.34pt) -- (419.35pt, -150.34pt)
+ -- (419.35pt, -150.34pt)
+ -- (419.35pt, -149.3801pt)
+ -- (419.35pt, -149.3801pt)
+ -- (291.53pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -149.38pt) -- (420.31pt, -149.38pt)
+ -- (420.31pt, -149.38pt)
+ -- (420.31pt, -135.82pt)
+ -- (420.31pt, -135.82pt)
+ -- (419.35pt, -135.82pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(419.35pt, -150.34pt) -- (420.31pt, -150.34pt)
+ -- (420.31pt, -150.34pt)
+ -- (420.31pt, -149.3801pt)
+ -- (420.31pt, -149.3801pt)
+ -- (419.35pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(420.31pt, -150.34pt) -- (548.01pt, -150.34pt)
+ -- (548.01pt, -150.34pt)
+ -- (548.01pt, -149.3801pt)
+ -- (548.01pt, -149.3801pt)
+ -- (420.31pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -149.38pt) -- (548.98pt, -149.38pt)
+ -- (548.98pt, -149.38pt)
+ -- (548.98pt, -135.82pt)
+ -- (548.98pt, -135.82pt)
+ -- (548.02pt, -135.82pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -150.34pt) -- (548.98pt, -150.34pt)
+ -- (548.98pt, -150.34pt)
+ -- (548.98pt, -149.3801pt)
+ -- (548.98pt, -149.3801pt)
+ -- (548.02pt, -149.3801pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(548.02pt, -150.34pt) -- (548.98pt, -150.34pt)
+ -- (548.98pt, -150.34pt)
+ -- (548.98pt, -149.3801pt)
+ -- (548.98pt, -149.3801pt)
+ -- (548.02pt, -149.3801pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-160.66){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(39pt, -177.22pt) -- (543.1pt, -177.22pt)
+ -- (543.1pt, -177.22pt)
+ -- (543.1pt, -163.78pt)
+ -- (543.1pt, -163.78pt)
+ -- (39pt, -163.78pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-174.1){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}For a 60 Hz display refresh rate, what would be the appropriate value (as measured in seconds, clocks, and }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_282751][even odd rule]
+(39pt, -190.54pt) -- (351.07pt, -190.54pt)
+ -- (351.07pt, -190.54pt)
+ -- (351.07pt, -177.22pt)
+ -- (351.07pt, -177.22pt)
+ -- (39pt, -177.22pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(39,-187.54){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}horizontal lines) for the vertical sync time T}
+\put(232.25,-183.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}V}
+\put(236.21,-188.5){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}S}
+\put(239.45,-187.54){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}? Explain your reasoning.  }
+\put(39,-200.86){\fontsize{11.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\end{document}
