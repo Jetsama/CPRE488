@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jan 23 15:10:20 2024
+# Process ID: 5016
+# Current directory: U:/CprE488/Labs/MP-0/mp_0/mp_0.runs/zynq_design_1_axi_gpio_1_0_synth_1
+# Command line: vivado.exe -log zynq_design_1_axi_gpio_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zynq_design_1_axi_gpio_1_0.tcl
+# Log file: U:/CprE488/Labs/MP-0/mp_0/mp_0.runs/zynq_design_1_axi_gpio_1_0_synth_1/zynq_design_1_axi_gpio_1_0.vds
+# Journal file: U:/CprE488/Labs/MP-0/mp_0/mp_0.runs/zynq_design_1_axi_gpio_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source zynq_design_1_axi_gpio_1_0.tcl -notrace

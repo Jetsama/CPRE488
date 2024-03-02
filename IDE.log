@@ -1,0 +1,7 @@
+11:20:44 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Git\CPRE488\temp_xsdb_launch_script.tcl
+11:20:47 INFO  : XSCT server has started successfully.
+11:20:47 INFO  : plnx-install-location is set to ''
+11:20:47 INFO  : Platform repository initialization has completed.
+11:20:52 INFO  : Successfully done setting XSCT server connection channel  
+11:20:52 INFO  : Successfully done query RDI_DATADIR 
+11:20:52 INFO  : Successfully done setting workspace for the tool. 

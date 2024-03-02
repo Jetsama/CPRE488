@@ -1,0 +1,98 @@
+!SESSION 2024-02-06 11:19:47.528 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2024-02-06 11:20:39.894
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY org.eclipse.ui 4 4 2024-02-06 11:20:42.799
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:47.519
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:47.520
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:47.533
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:47.535
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-9
+
+!ENTRY org.eclipse.osgi 2 0 2024-02-06 11:20:50.378
+!MESSAGE While loading class "com.xilinx.sdsoc.core.SDSCorePlugin", thread "Thread[Worker-4: Start workspace monitor,5,main]" timed out waiting (5006ms) for thread "Thread[main,6,main]" to finish starting bundle "com.xilinx.sdsoc.core_1.0.0.202005280226 [32]". To avoid deadlock, thread "Thread[Worker-4: Start workspace monitor,5,main]" is proceeding but "com.xilinx.sdsoc.core.SDSCorePlugin" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="com.xilinx.sdsoc.core"; type="osgi.bundle"; version:Version="1.0.0.202005280226"; singleton:="true" [id=32] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at com.xilinx.sdk.utils.monitors.SDKWorkspaceResourceChangeListener.getDeleteListeners(SDKWorkspaceResourceChangeListener.java:128)
+	at com.xilinx.sdk.utils.monitors.SDKWorkspaceResourceChangeListener.<init>(SDKWorkspaceResourceChangeListener.java:35)
+	at com.xilinx.sdk.utils.monitors.WorkspaceProjectsMonitor.register(WorkspaceProjectsMonitor.java:12)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.lambda$1(WorkspaceInit.java:107)
+	at org.eclipse.core.runtime.jobs.Job$1.run(Job.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	... 22 more
+Root exception:
+java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
+	at org.eclipse.osgi.container.Module.start(Module.java:401)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:114)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:505)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:392)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:470)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:411)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:609)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:177)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:931)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:60)
+	at com.xilinx.sdk.utils.monitors.SDKWorkspaceResourceChangeListener.getDeleteListeners(SDKWorkspaceResourceChangeListener.java:128)
+	at com.xilinx.sdk.utils.monitors.SDKWorkspaceResourceChangeListener.<init>(SDKWorkspaceResourceChangeListener.java:35)
+	at com.xilinx.sdk.utils.monitors.WorkspaceProjectsMonitor.register(WorkspaceProjectsMonitor.java:12)
+	at com.xilinx.ide.tools.startup.WorkspaceInit.lambda$1(WorkspaceInit.java:107)
+	at org.eclipse.core.runtime.jobs.Job$1.run(Job.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.897
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.898
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.899
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.899
+!MESSAGE XSCT Command: [setws C:/Git/CPRE488], Thread: Thread-13
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.900
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, F:/Xilinx_Unified_2020.1_0602_1208/Vitis/2020.1/data]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-02-06 11:20:52.901
+!MESSAGE XSCT command with result: [setws C:/Git/CPRE488], Result: [null, ]. Thread: Thread-13

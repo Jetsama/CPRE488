@@ -1,0 +1,276 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 14272
+License: Customer
+
+Current time: 	Tue Feb 06 11:19:15 CST 2024
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1600x900
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Jetsan
+User home directory: C:/Users/Jetsan
+User working directory: C:/Git/CPRE488/mp_0
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: F:/Xilinx_Unified_2020.1_0602_1208/Vivado
+HDI_APPROOT: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1
+RDI_DATADIR: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/data
+RDI_BINDIR: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Jetsan/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Jetsan/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Jetsan/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Git/CPRE488/mp_0/vivado.log
+Vivado journal file location: 	C:/Git/CPRE488/mp_0/vivado.jou
+Engine tmp dir: 	C:/Git/CPRE488/mp_0/.Xil/Vivado-14272-DESKTOP-61JHCQ6
+
+Xilinx Environment Variables
+----------------------------
+XILINX: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1
+XILINX_SDK: F:/Xilinx_Unified_2020.1_0602_1208/Vitis/2020.1
+XILINX_VITIS: F:/Xilinx_Unified_2020.1_0602_1208/Vitis/2020.1
+XILINX_VIVADO: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1
+XILINX_VIVADO_HLS: F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,139 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Git\CPRE488\mp_0\mp_0.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Git/CPRE488/mp_0/mp_0.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,139 MB. GUI used memory: 50 MB. Current time: 2/6/24, 11:19:16 AM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 73 MB (+74146kb) [00:00:12]
+// [Engine Memory]: 1,139 MB (+1042369kb) [00:00:12]
+// [GUI Memory]: 89 MB (+12701kb) [00:00:13]
+// [GUI Memory]: 95 MB (+1496kb) [00:00:13]
+// [GUI Memory]: 102 MB (+2872kb) [00:00:14]
+// [GUI Memory]: 113 MB (+5620kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3240 ms.
+// Tcl Message: open_project C:/Git/CPRE488/mp_0/mp_0.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'U:/CprE488/Labs/MP-0/mp_0' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx_Unified_2020.1_0602_1208/Vivado/2020.1/data/ip'. 
+// Project name: mp_0; location: C:/Git/CPRE488/mp_0; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1294.699 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 135 MB (+17084kb) [00:00:18]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cs)
+selectMenuItem((HResource) null, "Launch Vitis IDE"); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+// bz (cs):  Launch Vitis IDE : addNotify
+// 'X' command handler elapsed time: 3 seconds
+dismissDialog("Launch Vitis IDE"); // bz (cs)
+// [GUI Memory]: 144 MB (+2759kb) [00:00:41]
+// Elapsed time: 104 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Git/CPRE488/mp_0/mp_0.srcs/sources_1/bd/zynq_design_1/zynq_design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1 Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc 
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: zynq_design_1_auto_pc_0  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Successfully read diagram <zynq_design_1> from BD file <C:/Git/CPRE488/mp_0/mp_0.srcs/sources_1/bd/zynq_design_1/zynq_design_1.bd> 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,175 MB. GUI used memory: 81 MB. Current time: 2/6/24, 11:21:41 AM CST
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1210 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+// Elapsed time: 12 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: INFO: [BD 41-433]  Design successfully migrated to use XCI files... 
+// Tcl Message: Wrote  : <C:/Git/CPRE488/mp_0/mp_0.srcs/sources_1/bd/zynq_design_1/ui/bd_7b734dad.ui>  
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.699 ; gain = 0.000 
+// 'bJ' command handler elapsed time: 12 seconds
+// a (cs): Critical Messages: addNotify
+dismissDialog("Open Block Design"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// [Engine Memory]: 1,199 MB (+3806kb) [00:03:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 88 MB. Current time: 2/6/24, 11:22:36 AM CST
+// Elapsed time: 48 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Advanced", 1); // bi (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bi (E, r)
+dismissDialog("Re-customize IP"); // r (cs)
+// Elapsed time: 191 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cs)
+selectMenuItem((HResource) null, "Launch Vitis IDE"); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+// bz (cs):  Launch Vitis IDE : addNotify
+// 'X' command handler elapsed time: 4 seconds
+dismissDialog("Launch Vitis IDE"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 89 MB. Current time: 2/6/24, 11:52:37 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/6/24, 12:22:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/6/24, 12:52:37 PM CST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 19836537 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/6/24, 6:26:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 77 MB. Current time: 2/6/24, 6:56:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/6/24, 7:26:53 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  11773451 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 77 MB. Current time: 2/6/24, 11:12:01 PM CST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 11773703 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/6/24, 11:42:02 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/7/24, 12:12:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/7/24, 12:42:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/7/24, 1:12:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 76 MB. Current time: 2/7/24, 1:42:03 AM CST
