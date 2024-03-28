@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  3 MAR 2024 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.20)  23 MAR 2024 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./HW3.tex
-(HW3.tex
+**./HW4.tex
+(HW4.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30>
 (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -631,8 +631,8 @@ ftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count321
 \l__pdf_internal_box=\box111
-) (HW3.aux)
-\openout1 = `HW3.aux'.
+) (HW4.aux)
+\openout1 = `HW4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
 LaTeX Font Info:    ... okay on input line 125.
@@ -724,139 +724,72 @@ kii
 )
 Package hyperref Info: Link coloring OFF on input line 125.
 \c@lstlisting=\count328
-<images/Problem1.png, id=4, 554.82281pt x 290.58563pt>
-File: images/Problem1.png Graphic file (type png)
-<use images/Problem1.png>
-Package pdftex.def Info: images/Problem1.png  used on input line 144.
-(pdftex.def)             Requested size: 361.35016pt x 189.2553pt.
-<images/i2c_bit_trnsf.jpg, id=6, 380.92313pt x 146.04562pt>
-File: images/i2c_bit_trnsf.jpg Graphic file (type jpg)
-<use images/i2c_bit_trnsf.jpg>
-Package pdftex.def Info: images/i2c_bit_trnsf.jpg  used on input line 150.
-(pdftex.def)             Requested size: 361.3634pt x 138.54642pt.
-<images/Problem1-colored.png, id=8, 554.82281pt x 290.58563pt>
-File: images/Problem1-colored.png Graphic file (type png)
-<use images/Problem1-colored.png>
-Package pdftex.def Info: images/Problem1-colored.png  used on input line 158.
-(pdftex.def)             Requested size: 361.35016pt x 189.2553pt.
- [1
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+42.
+ (C:\Users\Jetsan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (274.6888pt too wide) in paragraph at lines 138--147
+[]\T1/lmr/m/n/10 (-20) Sensor Ba-sics. Re-view the fol-low re-sources: Ac-celer
+om-e-ter In-tro: https://web.archive.org/web/20230329223955/https://www.hobbytr
+onics.co.uk/accelerometer-
+ []
+
+
+Overfull \hbox (58.60698pt too wide) in paragraph at lines 138--147
+\T1/lmr/m/n/10 (-20) info \TS1/lmr/m/n/10 (-20) ˆ \T1/lmr/m/n/10 (-20) Gy-ro-sc
+ope In-tro: https://web.archive.org/web/20230220084525/http://www.hobbytronics.
+co.uk/gyro-
+ []
+
+
+Overfull \hbox (72.36057pt too wide) in paragraph at lines 138--147
+\T1/lmr/m/n/10 (-20) info \TS1/lmr/m/n/10 (-20) ˆ \T1/lmr/m/n/10 (-20) Trade-of
+fs: https://web.archive.org/web/20230220083746/http://www.hobbytronics.co.uk/ac
+celerometer-
+ []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 170.
+
+
+
+Overfull \hbox (2.08331pt too wide) in paragraph at lines 168--171
+[]\T1/lmr/m/n/10 (-20) PID Con-trol. Next, re-view the fol-low-ing re-sources: 
+[][]https://sites.google.com/site/fpgaandco/pid-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
+
+ []
+
+[1
 
 {C:/Users/Jetsan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Jet
-san/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.161 T
-       he total binary value is 0b0100000100010. This can be broken up into ...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.161 T
-       he total binary value is 0b0100000100010. This can be broken up into ...
- <./images/Problem1.png> <./images/i2c_bit_trnsf.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 161--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
-
- []
-
-<images/I2C_Basic_Address_and_Data_Frames.jpg, id=23, 742.5pt x 165.825pt>
-File: images/I2C_Basic_Address_and_Data_Frames.jpg Graphic file (type jpg)
-<use images/I2C_Basic_Address_and_Data_Frames.jpg>
-Package pdftex.def Info: images/I2C_Basic_Address_and_Data_Frames.jpg  used on 
-input line 172.
-(pdftex.def)             Requested size: 361.35832pt x 80.70334pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
-
- []
-
-[2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.183 \end{quote}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.183 \end{quote}
-                  <./images/Problem1-colored.png> <./images/I2C_Basic_Address_a
-nd_Data_Frames.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 186--190
-
- []
-
-<images/Zynq SW Stack.PNG, id=33, 129.48375pt x 172.84575pt>
-File: images/Zynq SW Stack.PNG Graphic file (type png)
-<use images/Zynq SW Stack.PNG>
-Package pdftex.def Info: images/Zynq SW Stack.PNG  used on input line 197.
-(pdftex.def)             Requested size: 129.48341pt x 172.8453pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
-
- []
-
-[3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.213 
-       <./images/Zynq SW Stack.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 217--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--230
-
- []
-
-[4] [5] (HW3.aux) ) 
+san/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Jetsan
+/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [2] (HW4.aux) ) 
 Here is how much of TeX's memory you used:
- 15424 strings out of 476331
- 246800 string characters out of 5787293
- 1860660 words of memory out of 5000000
- 35563 multiletter control sequences out of 15000+600000
- 532825 words of font info for 67 fonts, out of 8000000 for 9000
+ 15386 strings out of 476331
+ 246249 string characters out of 5787293
+ 1862660 words of memory out of 5000000
+ 35559 multiletter control sequences out of 15000+600000
+ 532241 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,7n,81p,1002b,517s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmbx12.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmr10.pfb><C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmr17.pfb>
-Output written on HW3.pdf (5 pages, 334946 bytes).
+ 77i,5n,81p,1002b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<
+C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb>
+<C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
+<C:/Users/Jetsan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb>
+
+Output written on HW4.pdf (2 pages, 97211 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 12370 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 14393 words of extra memory for PDF output out of 14400 (max. 10000000)
 

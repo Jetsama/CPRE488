@@ -108,7 +108,6 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 
-\epstopdfDeclareGraphicsRule{.gif}{png}{.png}{convert gif:#1 png:\OutputFile}
 \AppendGraphicsExtensions{.gif}
 \usepackage{chngcntr}
 \counterwithin*{equation}{section}
@@ -129,7 +128,7 @@
 \begin{flushleft}
 \begin{LARGE}CPRE 488 Homework 3 Spring 2024
 \end{LARGE}
-\\Digital Camera Sensor
+\\Linux Device Drivers
 \\Jonathan Hess
 \\\href{https://github.com/Jetsama/CPRE488/tree/main/HW3}{GitHub Page}
 \end{flushleft}
@@ -181,32 +180,58 @@ So we know that the controller is requesting data from a 7 bit addressable respo
 \begin{quote}
 Fun with Documentation. Unlike in previous labs, where it was possible to get by without reading any of the
 background material or documentation, the driver development in MP-3 will make you a very sad panda if you don’t have a good feel for embedded Linux.\\
-\\For starters, Xilinx maintains a very nice wiki on porting Linux to Zynq-based devices. In MP-3, we will not be
-following their directions precisely, but it provides a useful overview of several of the major steps involved. Read
-through the wiki (starting here: http://www.wiki.xilinx.com/Getting+Started), and in your writeup, describe the
-4 files that are needed to boot Linux on Zynq.\\
 \end{quote}
 
 \subsection{Problem 2a}\begin{quote}
+For starters, Xilinx maintains a very nice wiki on porting Linux to Zynq-based devices. In MP-3, we will not be
+following their directions precisely, but it provides a useful overview of several of the major steps involved. Read
+through the wiki (starting here: http://www.wiki.xilinx.com/Getting+Started), and in your writeup, describe the
+4 files that are needed to boot Linux on Zynq.\\
 
-The first file that you need is the image to put onto the SD card. This is what contains the OS.\\ 
-They are avialable at the \href{https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842316/Linux+Prebuilt+Images}{Linux Prebuilt Images} page.\\
+
+The main boot order is shown in the following picture
 \end{quote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=5in]{images/Zynq SW Stack.PNG
+} \\
+\caption{Image of the embedded software stack\cite{xlinx}}
+\end{figure}
+The four files need are as follows\cite{logic}:\\
 
-The second file needed is the PetaLinux BSP. We are using the Zynq 7000 board which can be seen \href{https://www.xilinx.com/products/boards-and-kits/ek-z7-zc702-g.html}{here}. This means that we are using the \href{https://www.xilinx.com/member/forms/download/xef.html?filename=xilinx-zc702-v2019.2-final.bsp}{ZC702 PetaLinux BSP}.\\
+The zImage file which contains the compressed Linux image is the OS that will be running on the board.\\
+The BOOT.BIN file which contains the First Stage Bootloader (FSBL) which loads the hardware bitstream.\\
+The dtb which is the device tree blob that contains the information about the hardware for the linux OS.\\
+The ramdisk8M.image.gz which allows the some of the RAM to be used as a disk drive for file storage.\\ 
+
+For the sources, so far I have found the following.
+
+The linux OS image file that we need is the image to put onto the SD card have easily accessible versions.\\ 
+They are avialable at the \href{https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842316/Linux+Prebuilt+Images}{Linux Prebuilt Images} page.\\
+
+The PetaLinux BSP can be found on the website as well. We are using the Zynq 7000 board which can be seen \href{https://www.xilinx.com/products/boards-and-kits/ek-z7-zc702-g.html}{here}. This means that we are using the \href{https://www.xilinx.com/member/forms/download/xef.html?filename=xilinx-zc702-v2019.2-final.bsp}{ZC702 PetaLinux BSP}.\\
 
 
-
-\subsection{Problem 2b}\begin{quote}
-
+\subsection{Problem 2b}
 \begin{quote}
 Next, open up the Zynq-7000 technical reference manual, which is available on the CprE 488 course webpage:
 http://class.ece.iastate.edu/cpre488/resources/ug585-Zynq-7000-TRM.pdf. Read all 1800+ pages (or just
 Chapter 6, your choice) and provide a summary, in your own words, of the steps involved in the Zynq boot
 process. Where does code get executed from, how does the programmable logic get programmed, etc.?\\
+\end{quote}
+When the S\_POR\_B reset pin changes the boot begins.
 
+The boot process first begins by loading the BootROM which can configure the system and peripherals for the first stage boot loader. The first stage boot loader is responsible for further setup of the processor with configuring the system memory (DDR RAM), loading the bitstream, and then loads the second stage boot. The second stage boot or the universal boot (U-boot) loads and starts the kernel for our OS (linux). Then the U-Boot will hand off control of the memory and other components to the OS.\\
 
-\\Finally, check out the Linux Device Drivers reference, also available on the course webpage:
+As for the locations of these processes.\\
+The BootROM is on the chip and is non writable as it is Read Only Memory.
+The FSBL code which will be loaded by the BootROM can be on the flash memory or on the SD card.
+After this point any boot is considered a secondary boot. The U-boot and Linux image are handled independently of the specific hardware.\\
+
+The programmable logic is defined in the bitstream which will be loaded by the FSBL if it was included.
+
+\begin{quote}
+Finally, check out the Linux Device Drivers reference, also available on the course webpage:
 http://class.ece.iastate.edu/cpre488/resources/ldd3.pdf. Specifically, focus on Chapters 1-3 and 13. In your
 writeup, answer the following three questions:
 \end{quote}
@@ -217,11 +242,17 @@ What are the three different classes of devices in Linux? Which class is most ap
 missile launcher? Briefly defend your answer.
 \end{quote}
 
+Linux defines devices as either a char module, a block module, or a network module.
+
+The missile launcher would be best served by the character device. This is because we will want to be sending data to the missile launcher at all times in a stream of data rather than as a chunk of data.
+
 \subsection{Problem 2b}\begin{quote}
 From a programmer’s perspective, what makes driver development different from user-space
 application development? For example, why can we not call libc functions such as printf()? Why is
 floating-point code not allowed?
 \end{quote}
+
+Programming drivers is very different from applications development. This is because you are working directly with memory and run in privileged mode. Also the libc functions are not available because those are created in the user space with the kernel.
 
 \subsection{Problem 2c}\begin{quote}
 
@@ -230,12 +261,22 @@ we use for our missile launcher?
 What is an “urb” in the context of a USB device drive
 \end{quote}
 
+The major vs minor device numbers differentiate between different devices or different drivers. An example is multiple partitions on one drive. The major device number would tell what device driver such as one for a HDD whereas a minor device number would specify which partition on that HDD.
+
+
+"urb" stands for USB Request Block. This is used for asynchronous communication between the USB host and the usb device.\cite{linux}
+
 
 \begin{thebibliography}{9}
 
 \bibitem{jeremy}\href{https://jeremyclark.ca/wp/telecom/i2c-programming-scope-detection/}{I2C Programming \& Scope Detection}
 \bibitem{spark}\href{https://learn.sparkfun.com/tutorials/i2c/all
 }{I2C SparkFun}
+\bibitem{xlinx}\href{https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/189530183/Zynq-7000}{Zynq-7000 Start Up Guide}
+\bibitem{linux}\href{https://docs.kernel.org/driver-api/usb/URB.html
+}{USB Request Block (URB)}
+\bibitem{logic}\href{https://tutorials.logictronix.com/our-resources/petalinux-development/stages-of-the-zynq-linux-boot-process/}{Stages of the Zynq Linux boot process}
+
 \end{thebibliography}
 
 \end{document}

@@ -1,0 +1,207 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=25mm,right=25mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\AppendGraphicsExtensions{.gif}
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\usepackage{float} 
+
+\usepackage{amsmath}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{%
+    \setcounter{equation}{0}%
+    \oldsubsection%
+}
+
+\begin{document}
+
+
+\begin{flushleft}
+\begin{LARGE}CPRE 488 Homework 4 Spring 2024
+\end{LARGE}
+\\PID Control
+\\Jonathan Hess
+\\\href{https://github.com/Jetsama/CPRE488/tree/main/HW4}{GitHub Page}
+\end{flushleft}
+
+\section{Problem 1}
+\begin{quote}
+Sensor Basics. Review the follow resources:
+Accelerometer Intro:
+https://web.archive.org/web/20230329223955/https://www.hobbytronics.co.uk/accelerometer-
+info
+• Gyroscope Intro:
+https://web.archive.org/web/20230220084525/http://www.hobbytronics.co.uk/gyro-info
+• Trade-offs:
+https://web.archive.org/web/20230220083746/http://www.hobbytronics.co.uk/accelerometer-
+gyro
+\end{quote}
+
+
+\subsection{Problem 1a}\begin{quote}
+Given a generic 3-axis accelerometer, show the math to derive the Roll and Pitch angle of the sensor.
+Simplifying assumption: assume the sensor will only be rotated about a single axis (X, Y, or Z), and that
+the sensor is static when the Roll or Pitch is calculated.
+\end{quote}
+
+
+
+\subsection{Problem 1b}\begin{quote}
+Repeat a) for a generic 3-axis gyroscope. Simplifying assumption: assume the sensor begins at Roll,
+Pitch, and Yaw orientation of (0, 0, 0) degrees, and is then rotated about a single axis to its final
+orientation.
+\end{quote}
+
+
+
+\section{Problem 2}
+\begin{quote}
+PID Control. Next, review the following resources:
+\href{http://en.wikipedia.org/wiki/PID_controller}
+\href{https://sites.google.com/site/fpgaandco/pid-demo}\\
+\end{quote}
+
+\subsection{Problem 2a}\begin{quote}
+In terms an average eighth grader could understand, explain how the P, D, and I components of a PID
+controller’s correction output moves an object from an initial location to its goal location.\\
+\end{quote}
+
+
+
+\subsection{Problem 2b}\begin{quote}
+Provide pseudo-code for implementing the discrete version of the PID control algorithm.
+\end{quote}
+
+
+\subsection{Problem 2c}\begin{quote}
+Demonstrate that you can reason about the P, I, and D components of a PID controller. In the examples
+on the following page, a PID controller provides a corrective force to a ball that is being moved from
+point ‘a’ to point ‘b’ on a 45 degree slope. The first plot shows the response of the ball moving from a
+height of 0m to 1m under the control of a of properly tuned PID controller. For each of the remaining
+plots, the P, I, and/or D constant of a PID controller has not been tuned properly. A statement has been
+made for each plot. Indicate if the statement is True or False, and defend your answer.
+\end{quote}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{jeremy}\href{https://jeremyclark.ca/wp/telecom/i2c-programming-scope-detection/}{I2C Programming \& Scope Detection}
+\bibitem{spark}\href{https://learn.sparkfun.com/tutorials/i2c/all
+}{I2C SparkFun}
+\bibitem{xlinx}\href{https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/189530183/Zynq-7000}{Zynq-7000 Start Up Guide}
+\bibitem{linux}\href{https://docs.kernel.org/driver-api/usb/URB.html
+}{USB Request Block (URB)}
+\bibitem{logic}\href{https://tutorials.logictronix.com/our-resources/petalinux-development/stages-of-the-zynq-linux-boot-process/}{Stages of the Zynq Linux boot process}
+
+\end{thebibliography}
+
+\end{document}
