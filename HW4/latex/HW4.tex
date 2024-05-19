@@ -135,13 +135,16 @@
 
 \section{Problem 1}
 \begin{quote}
-Sensor Basics. Review the follow resources:
-Accelerometer Intro:
+Sensor Basics. Review the follow resources:\\
+
+Accelerometer Intro:\\
 https://web.archive.org/web/20230329223955/https://www.hobbytronics.co.uk/accelerometer-
-info
-• Gyroscope Intro:
-https://web.archive.org/web/20230220084525/http://www.hobbytronics.co.uk/gyro-info
-• Trade-offs:
+info\\
+
+Gyroscope Intro:\\
+https://web.archive.org/web/20230220084525/http://www.hobbytronics.co.uk/gyro-info\\
+
+Trade-offs:\\
 https://web.archive.org/web/20230220083746/http://www.hobbytronics.co.uk/accelerometer-
 gyro
 \end{quote}
@@ -153,6 +156,29 @@ Simplifying assumption: assume the sensor will only be rotated about a single ax
 the sensor is static when the Roll or Pitch is calculated.
 \end{quote}
 
+The force of gravity is (assumed to be) constant. Because of this we can assume that at 0 tilts we would have the full g force in the negative z direction.
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{images/rotations.jpg} \\
+\caption{Rotations definitions\cite{rotation}.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{images/rollpitchyaw.png} \\
+\caption{Roll, Pitch and Yaw and XYZ axis\cite{Roll}.}
+\end{figure}
+
+To determine the Roll we can use the amount of the force has shifted to the different axis.
+
+Using the figure we can see that the roll is determined by the X axis.\\
+$Roll = sin^{-1}(x/z)$\\
+
+This can be easily checked by using g as z and 0 as x.\\
+
+
+To determine the pitch we do the same thing but with the Y axis instead.\\
+$Pitch = sin^{-1}(y/z)$\\
+
 
 
 \subsection{Problem 1b}\begin{quote}
@@ -161,13 +187,18 @@ Pitch, and Yaw orientation of (0, 0, 0) degrees, and is then rotated about a sin
 orientation.
 \end{quote}
 
+The gyroscope already measures change in rotation so we can integrate that to get the current rotations.
+
+$Roll = \int \omega_y \, dt$\\
+
+$Pitch = \int \omega_x \, dt$\\
 
 
 \section{Problem 2}
 \begin{quote}
-PID Control. Next, review the following resources:
-\href{http://en.wikipedia.org/wiki/PID_controller}
-\href{https://sites.google.com/site/fpgaandco/pid-demo}\\
+PID Control. Next, review the following resources:\\
+\href{http://en.wikipedia.org/wiki/PID_controller}{Wikipedia}\\
+\href{https://sites.google.com/site/fpgaandco/pid-demo}{PID-demo}\\
 \end{quote}
 
 \subsection{Problem 2a}\begin{quote}
@@ -175,11 +206,32 @@ In terms an average eighth grader could understand, explain how the P, D, and I 
 controller’s correction output moves an object from an initial location to its goal location.\\
 \end{quote}
 
+There is error which is the difference between your desired value and the actual value.\\
+
+P corrects for the current error.\\
+D corrects for the average error over time.\\
+I corrects for the error in the rate of change.\\
+
+These allow to not overshoot as much when correcting for the existing error.\\
 
 
 \subsection{Problem 2b}\begin{quote}
 Provide pseudo-code for implementing the discrete version of the PID control algorithm.
 \end{quote}
+
+\begin{lstlisting}
+PID(expected value, actual value){
+
+last error = error;
+error = expected value - actual value;
+sum = sum+ error; 
+
+u = P*error + I*(sum) + D*(error - last error);
+
+return u
+
+}
+\end{lstlisting}
 
 
 \subsection{Problem 2c}\begin{quote}
@@ -192,15 +244,43 @@ made for each plot. Indicate if the statement is True or False, and defend your 
 \end{quote}
 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=5in]{images/Problem2-1.png} \\
+\end{figure}
+
+i) P constant is too large\\
+
+This is false, a large P would cause the value to overshoot not undershoot. It is not correcting to the position.\\
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5in]{images/Problem2-2.png} \\
+\end{figure}
+
+ii) D constant is too large\\
+
+This is false, D constant being large would cause it to settle slower not oscillate.\\
+
+iii) D constant is too large\\
+
+This is true, the slow speed of change is controlled by the D.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5in]{images/Problem2-3.png} \\
+\end{figure}
+
+iv) I constant is too small \\
+False, a small I value would not cause oscillation. Increasing I would only create worse oscillations.
+
+v) P constant too large\\
+This is true. The overshooting is a sign that it is underdamped and is over correcting for the positional error.
 \begin{thebibliography}{9}
 
-\bibitem{jeremy}\href{https://jeremyclark.ca/wp/telecom/i2c-programming-scope-detection/}{I2C Programming \& Scope Detection}
-\bibitem{spark}\href{https://learn.sparkfun.com/tutorials/i2c/all
-}{I2C SparkFun}
-\bibitem{xlinx}\href{https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/189530183/Zynq-7000}{Zynq-7000 Start Up Guide}
-\bibitem{linux}\href{https://docs.kernel.org/driver-api/usb/URB.html
-}{USB Request Block (URB)}
-\bibitem{logic}\href{https://tutorials.logictronix.com/our-resources/petalinux-development/stages-of-the-zynq-linux-boot-process/}{Stages of the Zynq Linux boot process}
+\bibitem{rotation}\href{https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/aircraft-rotations/}{NASA: Aircraft Rotations}
+\bibitem{Roll}\href{https://xmarklabs.com/blog/2017/08/mysteries-tracking/rollpitchyaw/}{Roll, Pitch and Yaw}
 
 \end{thebibliography}
 
